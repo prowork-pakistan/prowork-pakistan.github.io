@@ -4,7 +4,9 @@
       <div class="col-lg-10 mx-auto col-md-12">
         <div class="page-header">
           <h2 style="font-weight: 600; color: #F3A31E;">Contact Us</h2>
-          <p style="color: #F5F5F7;">Reach Out, Let's Connect! Whether you have questions, feedback, or simply want to chat about workspace solutions, we're here to help. Dive into the ProWork experience by getting in touch with us today.</p>
+          <p style="color: #F5F5F7;">Reach Out, Let's Connect! Whether you have questions, feedback, or simply want to
+            chat about workspace solutions, we're here to help. Dive into the ProWork experience by getting in touch
+            with us today.</p>
         </div>
       </div>
     </div>
@@ -12,31 +14,25 @@
       <div class="col-lg-8 mx-auto">
         <div class="contact-form">
           <h2 style="color: #F5F5F7;">Contact Form</h2>
-          <form class="row" method="POST" action="https://fabform.io/f/IY7ktfd" >
+          <form class="row" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="6786d5cf-5106-4fa5-b42c-dde4ebc95488"> <!-- Add your public key here -->
             <div class="col-md-6">
-              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your Name" >
+              <input class="form-control" type="text" name="name" placeholder="Name" required>
             </div>
             <div class="col-md-6">
-              <input type="email" class="form-control" id="validationCustom02" required="" placeholder="Your Email" name="email">
+              <input class="form-control" type="email" name="email" placeholder="Email" required>
             </div>
             <div class="col-md-12">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"
-                placeholder="Message here…"></textarea>
+              <textarea class="form-control" name="message" rows="8" placeholder="Type your message here..." required></textarea>
             </div>
             <div class="col-md-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck" style="color: #F5F5F7;">
-                  I agree that my submitted data is being collected and stored.
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <button type="submit" class="btn btn-primary" formtarget="_blank">Send Message</button>
-            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Send Message</button>
+          </div>
           </form>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
