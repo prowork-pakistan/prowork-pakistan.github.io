@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prowork</title>
+
+    <!--Meta For No Index-->
+    <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Critical CSS -->
+    <link href="css/critical.css" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+
+<!-- Navbar Start -->
+<nav class="main-nav main-nav-colored navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img class="logo-main" src="images/logo.png" alt="logo">
+      <img class="logo-white" src="images/logo-white.png" alt="logo-white">
+    </a>
+    <!-- Toogle Button -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="index.html#gallery">Exibhitdion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="index.html#service">Feature</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link scroll-to" href="about.html">About</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="index.html#pricing">Pricing</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link scroll-to" href="contact.html">Contact</a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<section class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h2>About CoHub</h2>
+          <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget
+            consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="story-content">
+          <h2>This Is Our Story.
+          </h2>
+          <p>We’re here for those who refuse to settle. Who never stop moving forwards. Who continue to search for new
+            ideas and better experiences in everything they do. Because today’s hyper-connected world deserves a
+            financial partner just as progressive.One that adapts to your needs, gives you control and constantly pushes
+            you into new exciting spaces.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="story-slider">
+          <div class="slider-item">
+            <img src="../images/stor/story-01.jpg" alt="images">
+          </div>
+          <div class="slider-item">
+            <img src="../images/stor/story-01.jpg" alt="images">
+          </div>
+          <div class="slider-item">
+            <img src="../images/stor/story-01.jpg" alt="images">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2 style="color: #F5F5F7; font-weight: 600;">Take a look at Our <strong
+              style="color: #F3A31E;">Exibhition</strong></h2>
+          <p style="color: #F5F5F7; font-weight: 400;">
+            ProWork Pakistan: Where global innovators and entrepreneurs converge. Discover the future of workspaces at
+            our exhibition.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <div id="image-set-1" class="row active">
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery01.jpg">
+                <img src="../images/gallery/gallery01.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery02.jpg">
+                <img src="../images/gallery/gallery02.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery03.jpg">
+                <img src="../images/gallery/gallery03.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery04.jpg">
+                <img src="../images/gallery/gallery04.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+        </div>
+      <div id="circle-1" class="circle active"></div>
+      <div id="circle-2" class="circle"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .border-custom {
+    border-radius: 0px !important;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 30px 10px 30px 10px;
+    cursor: pointer;
+  }
+
+  .circle:hover {
+    background-color: #F3A31E;
+  }
+
+  .circle.active {
+    background-color: #F3A31E;
+  }
+
+</style>
+
+<script>
+document.getElementById('circle-1').addEventListener('click', function () {
+    toggleGallery('1');
+    setImageSource('1');
+});
+
+document.getElementById('circle-2').addEventListener('click', function () {
+    toggleGallery('2');
+    setImageSource('2');
+});
+function toggleGallery(setNumber) {
+    document.querySelectorAll('.circle').forEach(function (el) {
+      el.classList.remove('active');
+    });
+    document.getElementById('circle-' + setNumber).classList.add('active');
+}
+function setImageSource(setNumber) {
+    let imageElements = document.querySelectorAll('.gallery-item a img');
+    
+    imageElements.forEach((image, index) => {
+        let newImageNumber = (setNumber - 1) * 4 + (index + 1);
+        let newImageSrc = '../images/gallery/gallery0' + newImageNumber + '.jpg';
+        image.setAttribute('src', newImageSrc);
+        image.parentElement.setAttribute('href', newImageSrc);
+    });
+}
+</script>
+
+<section class="quotes">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="quotes-slider">
+          <div class="quotes-slider-item">
+            <h2>Behind every great product, there is a great mind.</h2>
+            <span>-TechCrunch</span>
+          </div>
+          <div class="quotes-slider-item">
+            <h2>Behind every great product, there is a great mind.</h2> <span>-TechCrunch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Featured In</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="clients-slider">
+          <div class="clients-slider-item">
+            <img src="../images/client/clients01.png" alt="images">
+          </div>
+          <div class="clients-slider-item">
+            <img src="../images/client/clients02.png" alt="images">
+          </div>
+          <div class="clients-slider-item">
+            <img src="../images/client/clients03.png" alt="images">
+          </div>
+          <div class="clients-slider-item">
+            <img src="../images/client/clients04.png" alt="images">
+          </div>
+          <div class="clients-slider-item">
+            <img src="../images/client/clients03.png" alt="images">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2>Our Angel Investors</h2>
+          <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis
+            at tellus. Nulla quis lorem ut libero malesuada feugiat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/design-team-01.jpg" alt="image">
+          </div>
+          <h3>Spider Web</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/design-team-02.jpg" alt="image">
+          </div>
+          <h3>Spider Web</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/design-team-03.jpg" alt="image">
+          </div>
+          <h3>Spider Web</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/marketing-team-01.jpg" alt="image">
+          </div>
+          <h3>Spider web</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/marketing-team-05.jpg" alt="image">
+          </div>
+          <h3>Spider Marketing</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/design-team-02.jpg" alt="image">
+          </div>
+          <h3>Spider Marketing</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/marketing-team-02.jpg" alt="image">
+          </div>
+          <h3>Spider Marketing</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="member-informashion">
+          <div class="member-thume">
+            <img src="../images/team/marketing-team-03.jpg" alt="image">
+          </div>
+          <h3>Spider Marketing</h3>
+          <p>Investor</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="footer-logo">
+          <img src="images/logo-dark.png" alt="logo"  style="width: 200px;">
+        </div>
+        <p class="footer-description">
+          "Welcome to ProWork Pakistan: Where ambition meets innovation. 
+          Designed for the modern professional, our workspace offers a 
+          blend of comfort, cutting-edge amenities, and a conducive 
+          environment that fosters growth and creativity."
+        </p>
+        <div class="footer-text-block">
+          <p>
+            Overseas 5 Commercial, Middle Ring Road, <br> Bahria Greens Phase 8 Bahria Town,<br> Rawalpindi, Punjab 46220, Pakistan
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 align-self-end">
+        <div class="footer-icon">
+          <ul>
+            <li>
+              <a href="#">
+                  <i class="ti-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <i class="ti-twitter-alt" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <i class="ti-dribbble" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <i class="ti-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright-text">
+          <p> © <span id="newYear"></span> ProWork All rights reserved. </p>
+          <!-- <ul> -->
+            <!-- <li><a href="PrivacyPolicy.html"></a></li> -->
+            <!-- <li><a href="terms.html"></a></li> -->
+          <!-- </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Non Critical CSS -->
+<link href="css/non-critical.css" rel="stylesheet" />
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
+</script>
+<!-- Vendor JS -->
+<script src="vendor/jQuery/jquery.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="vendor/match-height/match-height.js"></script>
+<script src="vendor/magnific-popup/magnific-popup.min.js"></script>
+<script src="vendor/g-map/gmap.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+</body>
+
+</html>

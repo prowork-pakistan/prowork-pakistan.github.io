@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prowork</title>
+
+    <!--Meta For No Index-->
+    <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Critical CSS -->
+    <link href="css/critical.css" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+
+<!-- Navbar Start -->
+<nav class="main-nav navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img class="logo-main" src="images/logo.png" alt="logo">
+      <img class="logo-white" src="images/logo-white.png" alt="logo-white">
+    </a>
+    <!-- Toogle Button -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="#gallery">Exibhition</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="#service">Feature</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link scroll-to" href="about.html">About</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="#pricing">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="#blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-to" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<section class="hero" style="position: relative; overflow: hidden;">
+  <!-- Video Background -->
+  <video playsinline autoplay muted loop style="position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; z-index: -1; transform: translate(-50%, -50%);">
+    <source src="images/hero/preview.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12">
+        <div class="hero-content">
+          <h1 style="font-size: 3.75rem; font-weight:1000 !important; text-shadow: 3px 3px #000000; line-height: 65px !important;">
+            ELEVATE WITH <br> PROWORK SPACES
+          </h1>
+          <p style="font-family: poppins;">
+            We have the Pakistan's best workspaces and co-working spaces.
+          </p>
+
+          <div class="cta-content responsive-margin">
+            <a href="contact.html" class="btn btn-primary mb-3" style="font-size: 20px; font-weight: 500;">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2 style="color: #F5F5F7; font-weight: 600;">Take a look at Our <strong
+              style="color: #F3A31E;">Exibhition</strong></h2>
+          <p style="color: #F5F5F7; font-weight: 400;">
+            ProWork Pakistan: Where global innovators and entrepreneurs converge. Discover the future of workspaces at
+            our exhibition.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <div id="image-set-1" class="row active">
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery01.jpg">
+                <img src="../images/gallery/gallery01.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery02.jpg">
+                <img src="../images/gallery/gallery02.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery03.jpg">
+                <img src="../images/gallery/gallery03.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="gallery-item">
+              <a href="../images/gallery/gallery04.jpg">
+                <img src="../images/gallery/gallery04.jpg" alt="gallery-images">
+              </a>
+            </div>
+          </div>
+        </div>
+      <div id="circle-1" class="circle active"></div>
+      <div id="circle-2" class="circle"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .border-custom {
+    border-radius: 0px !important;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 30px 10px 30px 10px;
+    cursor: pointer;
+  }
+
+  .circle:hover {
+    background-color: #F3A31E;
+  }
+
+  .circle.active {
+    background-color: #F3A31E;
+  }
+
+</style>
+
+<script>
+document.getElementById('circle-1').addEventListener('click', function () {
+    toggleGallery('1');
+    setImageSource('1');
+});
+
+document.getElementById('circle-2').addEventListener('click', function () {
+    toggleGallery('2');
+    setImageSource('2');
+});
+function toggleGallery(setNumber) {
+    document.querySelectorAll('.circle').forEach(function (el) {
+      el.classList.remove('active');
+    });
+    document.getElementById('circle-' + setNumber).classList.add('active');
+}
+function setImageSource(setNumber) {
+    let imageElements = document.querySelectorAll('.gallery-item a img');
+    
+    imageElements.forEach((image, index) => {
+        let newImageNumber = (setNumber - 1) * 4 + (index + 1);
+        let newImageSrc = '../images/gallery/gallery0' + newImageNumber + '.jpg';
+        image.setAttribute('src', newImageSrc);
+        image.parentElement.setAttribute('href', newImageSrc);
+    });
+}
+</script>
+
+<section class="cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cta-content">
+          <h2  style="color: #F5F5F7; font-weight: 600;">Free 1 Day <strong style="color: #F3A31E;">Trial</strong></h2>
+          <a href="contact.html" class="btn btn-primary mb-3">
+              Schedule Your Day
+          </a>
+          <p style="font-size: 12px;color: #F5F5F7; font-weight: 400;">or check out <a class="scroll-to" href="#pricing">pricing plans</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service" id="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title-black">
+          <h2 style="color: #07222A !important; font-weight: 600 !important;">Why <strong style="color: #F3A31E;">Choose</strong> us?</h2>
+          <p style="color: #07222A !important; font-weight: 400 !important; font-family: poppins;">
+              We enable people and businesses to work where they want, when they want and how they want.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <img src="images/icons/speed.svg" style="margin-bottom: 35px; width: 45px;">
+          <h3>High-Speed Internet</h3>
+          <p>
+            Experience seamless connectivity and productivity with our ultra-fast, reliable, and consistent internet.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <img src="images/icons/parking.svg" style="margin-bottom: 35px; width: 45px;">
+          <h3>Huge parking space</h3>
+          <p>
+            Drive in with ease and confidence. Our expansive parking space ensures a dedicated spot for everyone every time.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <img src="images/icons/mute.svg" style="margin-bottom: 35px; width: 40px;">
+          <h3>Quite envirnoment</h3>
+          <p>
+            Dive into work without distractions. Our serene setting is crafted for optimal productivity.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <img src="images/icons/tea.svg" style="margin-bottom: 35px; width: 45px;">
+          <h3>Unlimited Tea</h3>
+          <p>
+            Stay refreshed and energized with an endless supply of tea at your beck and call.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <img src="images/icons/building.svg" style="margin-bottom: 35px; width: 45px;">
+          <h3>Well maintained building</h3>
+          <p>
+            Step into a space where every corner speaks of pristine upkeep and professional ambiance.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="service-item">
+          <img src="images/icons/chair.svg" style="margin-bottom: 35px; width: 45px;">
+          <h3>Flexible Seating</h3>
+          <p>
+            Adaptability at its finest. Choose seating that aligns with your comfort and work style at ProWork.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hover-icon{
+    margin-bottom: 35px;
+  }
+  .hover-icon:hover{
+    background-color: #F3A31E;
+  }
+</style>
+
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2 style="color: #F5F5F7; font-weight: 600;">News, updates and <strong style="color: #F3A31E;">insights</strong></h2>
+          <p style="color: #F5F5F7; font-weight: 400;">
+              With a decade of insights and expertise, we’re reimagining property so that you can focus on
+              your business.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <article class="blog-post">
+          <img src="" alt="blog-images" id="blogOneIS">
+          <div class="blog-content">
+            <h3><a href="blog-post.html?post=1" style="color: #F3A31E;" id="blogOneH"></a></h3>
+            <p style="color: #F5F5F7; font-weight: 400;" id="blogOneSD"></p>
+            <a class="more" href="blog-post.html?post=1">Read more <span>⟶</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="blog-post">
+          <img src="" alt="blog-images" id="blogTwoIS">
+          <div class="blog-content">
+            <h3><a href="blog-post.html?post=2" style="color: #F3A31E;" id="blogTwoH"></a></h3>
+            <p style="color: #F5F5F7; font-weight: 400;" id="blogTwoSD"></p>
+            <a class="more" href="blog-post.html?post=2">Read more <span>⟶</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <article class="blog-post">
+          <img src="" alt="blog-images" id="blogThreeIS">
+          <div class="blog-content">
+            <h3><a href="blog-post.html?post=3" style="color: #F3A31E;" id="blogThreeH"></a></h3>
+            <p style="color: #F5F5F7; font-weight: 400;" id="blogThreeSD"></p>
+            <a class="more" href="blog-post.html?post=3">Read more <span>⟶</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="col-12 text-center">
+        <a href="blog.html" class="btn btn-primary">View Blog Page</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="testimonial-content">
+          <h3>Feedback</h3>
+          <p>
+            "At ProWork Pakistan, the high-speed internet and endless tea fueled my productivity. The flexible seating and ambiance are unmatched. Highly recommended!"
+            <!-- <cite>FRANCIS VAN PARYS, PRESIDENT AND CEO, GE HEALTHCARE KOREA</cite> -->
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2 style="color: #F5F5F7 !important; font-weight: 600 !important;">Simple <strong style="color: #F3A31E;">pricing</strong> for everyone</h2>
+          <p style="color: #F5F5F7; font-weight: 400;">Whether you're looking for a full-time workspace or are just visiting Islamabad, we've got an
+              option for everyone
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-wraper">
+          <div class="pricing-item">
+            <span class="price">
+                <sup>$</sup>19
+            </span>
+            <h3>Daily</h3>
+            <p>
+              Dive into a day of seamless productivity with high-speed internet, unlimited tea, and flexible seating.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-wraper">
+          <div class="pricing-item">
+            <span class="discount-badge" style="position: absolute; top: 10px; right: 10px; background-color: #40C057; color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">
+              33% off
+            </span>
+            <span class="price" style="text-decoration: line-through; font-size: 2rem;">
+                $79
+            </span>
+            <span class="price" style="display: block; margin-top: 5px;">
+                <sup>$</sup>53
+            </span>
+      
+            <h3>Weekly</h3>
+            <p>
+              Seven days of consistent work bliss. Perfect for short-term projects and those seeking a brief change of scenery.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="pricing-wraper">
+          <div class="pricing-item">
+            <span class="price">
+                <sup>$</sup>99
+            </span>
+            <h3>Monthly</h3>
+            <p>
+              A month-long commitment to your success. Enjoy uninterrupted access and all the ProWork perks daily.
+            </p>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Join Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq" id="faq" style="background: #f7f8fc !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12">
+        <div class="faq-content text-block responsive-margin">
+          <h2 style="font-weight: 600;">Frequently Asked<strong
+            style="color: #F3A31E;"> Questions</strong></h2>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3 style="font-weight: 600;">Q. Why should I choose your co-working space?</h3>
+              <p style="font-weight: 400;">
+                Our co-working space offers a professional and productive work environment with high-speed internet, modern amenities, and a supportive community that fosters creativity and growth.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3 style="font-weight: 600;">Q. What membership options are available?</h3>
+              <p style="font-weight: 400;">
+                We have flexible membership plans to suit your needs, including daily passes, monthly memberships, and private office options
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3 style="font-weight: 600;">Q. Is parking available?</h3>
+              <p style="font-weight: 400;">
+                We provide convenient parking options for our members and its for free.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3 style="font-weight: 600;">Q. How can I become a member?</h3>
+              <p style="font-weight: 400;">
+                Becoming a member is easy! Visit our <a href="contact.html">contact page</a> to sign up or schedule a tour to see our space in person.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h3 style="font-weight: 600;">Q. What are the operating hours of the co-working space?</h3>
+              <p style="font-weight: 400;">
+                We are open from 9am-9pm on Monday-Friday, we are also making arrangements to open at night times.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  @media screen and (max-width: 992px) {
+    .responsive-margin {
+      margin-top: 50px !important;
+    }
+  }
+</style>
+
+<section class="contact" id="contact">
+  <div class="container-fulid">
+    <div class="row no-gutters">
+      <div class="col-lg-6"
+        style="display: flex; justify-content: center; background-image: url(../images/hero/map.png); background-size: cover; background-repeat: no-repeat;">
+        <div class="cta-content responsive-display" style="position: absolute; bottom: 30px;">
+          <a href="https://www.google.com/maps/place/ProWork/@33.5044378,73.0642899,15.26z/data=!4m6!3m5!1s0x38dff3c086ec5765:0xf7fd2ac2ae33852e!8m2!3d33.5024301!4d73.0709897!16s%2Fg%2F11vf370843?hl=en&entry=ttu"
+            target="_blank" class="btn btn-primary mb-3">
+            View Google Maps
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-aria">
+          <h3>
+            Overseas 5 Commercial, Middle Ring Road, <br>Bahria Greens Phase 8 Bahria Town, <br>Rawalpindi, Punjab
+            46220, Pakistan
+          </h3>
+          <ul>
+            <li> <a href="mailto:business@prowork.com">business@prowork.com</a></li>
+            <li><a href="tel:+923114970728">+923114970728</a></li>
+          </ul>
+          <p>
+            Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on
+            business days.
+          </p>
+          <p>We are open from 7am — 7pm week days.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media screen and (max-width: 992px) {
+    .responsive-display {
+      display: none !important;
+    }
+  }
+</style>
+
+<section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="footer-logo">
+          <img src="images/logo-dark.png" alt="logo"  style="width: 200px;">
+        </div>
+        <p class="footer-description">
+          "Welcome to ProWork Pakistan: Where ambition meets innovation. 
+          Designed for the modern professional, our workspace offers a 
+          blend of comfort, cutting-edge amenities, and a conducive 
+          environment that fosters growth and creativity."
+        </p>
+        <div class="footer-text-block">
+          <p>
+            Overseas 5 Commercial, Middle Ring Road, <br> Bahria Greens Phase 8 Bahria Town,<br> Rawalpindi, Punjab 46220, Pakistan
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 align-self-end">
+        <div class="footer-icon">
+          <ul>
+            <li>
+              <a href="#">
+                  <i class="ti-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <i class="ti-twitter-alt" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <i class="ti-dribbble" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  <i class="ti-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-copyright-text">
+          <p> © <span id="newYear"></span> ProWork All rights reserved. </p>
+          <!-- <ul> -->
+            <!-- <li><a href="PrivacyPolicy.html"></a></li> -->
+            <!-- <li><a href="terms.html"></a></li> -->
+          <!-- </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Non Critical CSS -->
+<link href="css/non-critical.css" rel="stylesheet" />
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
+</script>
+<!-- Vendor JS -->
+<script src="vendor/jQuery/jquery.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="vendor/match-height/match-height.js"></script>
+<script src="vendor/magnific-popup/magnific-popup.min.js"></script>
+<script src="vendor/g-map/gmap.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+</body>
+
+</html>
