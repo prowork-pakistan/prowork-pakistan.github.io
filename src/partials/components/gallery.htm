@@ -1,89 +1,107 @@
 <section class="gallery" id="gallery">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-title">
-          <h2 style="color: #f5f5f7; font-weight: 600">
-            Take a look at Our
-            <strong style="color: #f3a31e">Exhibition</strong>
-          </h2>
-          <p style="color: #f5f5f7; font-weight: 400">
-            ProWork Pakistan: Where global innovators and entrepreneurs
-            converge. Discover the future of workspaces at our exhibition.
-          </p>
-        </div>
+      <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2 style="color: #f5f5f7; font-weight: 600">
+                Where Innovation Finds Its 
+                <strong style="color: #f3a31e">Space</strong>
+              </h2>
+              <p style="color: #f5f5f7; font-weight: 400">
+                We believe that great ideas are born through collaboration. Join our community 
+                to start collaborating, creating, and achieving your goals.
+              </p>
+            </div>
+          </div>
       </div>
-    </div>
-    <div class="row" style="justify-content: center">
-      <div id="image-set-1" class="row active">
-        <div class="col-md-6">
-          <div class="gallery-item">
-            <a href="../images/gallery/gallery01.jpg">
-              <img src="../images/gallery/gallery01.jpg" alt="gallery-images" />
-            </a>
+      <div class="row" style="justify-content: center">
+          <!-- Circle to the left -->
+          <div class="col-lg-1 d-flex align-items-center">
+              <div id="circle-1" class="circle left active"></div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="gallery-item">
-            <a href="../images/gallery/gallery02.jpg">
-              <img src="../images/gallery/gallery02.jpg" alt="gallery-images" />
-            </a>
+          <!-- Main Image Sets -->
+          <div class="col-lg-10">
+            <div id="image-set-1" class="row active">
+              <div class="col-md-6">
+                <div class="gallery-item">
+                  <a href="../images/gallery/gallery01.jpg">
+                    <img src="../images/gallery/gallery01.jpg" alt="gallery-images" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="gallery-item">
+                  <a href="../images/gallery/gallery02.jpg">
+                    <img src="../images/gallery/gallery02.jpg" alt="gallery-images" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="gallery-item">
+                  <a href="../images/gallery/gallery03.jpg">
+                    <img src="../images/gallery/gallery03.jpg" alt="gallery-images" />
+                  </a>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="gallery-item">
+                  <a href="../images/gallery/gallery04.jpg">
+                    <img src="../images/gallery/gallery04.jpg" alt="gallery-images" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="gallery-item">
-            <a href="../images/gallery/gallery03.jpg">
-              <img src="../images/gallery/gallery03.jpg" alt="gallery-images" />
-            </a>
+          <!-- Circle to the right -->
+          <div class="col-lg-1 d-flex align-items-center">
+              <div id="circle-2" class="circle right"></div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="gallery-item">
-            <a href="../images/gallery/gallery04.jpg">
-              <img src="../images/gallery/gallery04.jpg" alt="gallery-images" />
-            </a>
-          </div>
-        </div>
       </div>
-      <div id="circle-1" class="circle active"></div>
-      <div id="circle-2" class="circle"></div>
-    </div>
   </div>
 </section>
 
 <style>
-  .border-custom {
+.border-custom {
     border-radius: 0px !important;
-  }
+}
 
+
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: solid #f5f5f767;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.circle:hover {
+    border-color: #f3a31e;
+}
+
+.circle.active {
+    border-color: #f3a31e;
+}
+@media screen and (max-width: 992px) {
   .circle {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 30px 10px 30px 10px;
-    cursor: pointer;
+   display: none;
   }
-
-  .circle:hover {
-    background-color: #f3a31e;
-  }
-
-  .circle.active {
-    background-color: #f3a31e;
-  }
+}
 </style>
 
 <script>
-  document.getElementById("circle-1").addEventListener("click", function () {
-    toggleGallery("1");
-    setImageSource("1");
-  });
-
-  document.getElementById("circle-2").addEventListener("click", function () {
-    toggleGallery("2");
-    setImageSource("2");
-  });
   function toggleGallery(setNumber) {
     document.querySelectorAll(".circle").forEach(function (el) {
       el.classList.remove("active");
@@ -100,4 +118,18 @@
       image.parentElement.setAttribute("href", newImageSrc);
     });
   }
+  document.getElementById("circle-1").addEventListener("click", function () {
+    toggleGallery("1");
+    setImageSource("1");
+  });
+  document.getElementById("circle-2").addEventListener("click", function () {
+    toggleGallery("2");
+    setImageSource("2");
+  });
+  let currentSet = 1;
+  setInterval(() => {
+    currentSet = 3 - currentSet;
+    toggleGallery(currentSet.toString());
+    setImageSource(currentSet.toString());
+  }, 2500);
 </script>
