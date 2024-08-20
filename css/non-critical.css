@@ -924,7 +924,7 @@ button.mfp-close{font-family:"Poppins",sans-serif;font-weight:300;font-size:35px
 .post-list{text-align:left}.post-list li{font-size:22px}@media(max-width:400px){.post-list li{font-size:18px}
 }.post-list li:not(:last-child){margin-bottom:10px}.testimonial{position:relative;background:url(../images/testimonial-bg.jpg);background-position:center;background-size:cover;background-attachment:fixed;padding:100px 0}
 @media(max-width:991px){.testimonial{padding:50px 0}}.testimonial::after{content:"";position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.5);top:0;left:0}
-.testimonial-content{background:#fff;padding:50px 70px 40px;border-radius:6px;position:relative;z-index:1}
+.testimonial-content{background:#fff;padding:50px 30px 40px;border-radius:6px;position:relative;z-index:1}
 @media(max-width:991px){.testimonial-content{text-align:center}}@media(max-width:575px){.testimonial-content{padding:30px}
 }@media(max-width:400px){.testimonial-content{padding:30px 15px 15px}}.testimonial-content h3{font-weight:300;font-size:25px;margin-bottom:35px}
 .testimonial-content blockquote{line-height:32px;font-family:"Poppins",sans-serif;font-weight:600;letter-spacing:.5px;color:#000}
