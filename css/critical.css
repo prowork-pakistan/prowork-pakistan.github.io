@@ -1064,7 +1064,7 @@ h3{font-size:19px;font-weight:400;color:#000}h4{font-size:16px;font-weight:400}.
 .main-nav .navbar-toggler .icon-bar:nth-child(2){opacity:0;filter:alpha(opacity=0)}
 .main-nav .navbar-toggler .icon-bar:nth-child(3){transform:rotate(-45deg);transform-origin:10% 90%}
 .main-nav .navbar-toggler.collapsed .icon-bar:nth-child(1){transform:rotate(0)}.main-nav .navbar-toggler.collapsed .icon-bar:nth-child(2){opacity:1;filter:alpha(opacity=1)}
-.main-nav .navbar-toggler.collapsed .icon-bar:nth-child(3){transform:rotate(0)}.main-nav.nav-bg,.main-nav.main-nav-colored{background:rgba(22,22,23,0.8);padding:20px;border:0;box-shadow:0 0 12px 0 rgba(0,0,0,0.09);top:0}
+.main-nav .navbar-toggler.collapsed .icon-bar:nth-child(3){transform:rotate(0)}.main-nav.nav-bg,.main-nav.main-nav-colored{background:#161617;padding:20px;border:0;box-shadow:0 0 12px 0 rgba(0,0,0,0.09);top:0}
 @media(max-width:575px){.main-nav.nav-bg,.main-nav.main-nav-colored{top:10px;padding:20px 20px}
 }.main-nav.nav-bg .navbar-brand .logo-main,.main-nav.main-nav-colored .navbar-brand .logo-main{display:block}
 .main-nav.nav-bg .navbar-brand .logo-white,.main-nav.main-nav-colored .navbar-brand .logo-white{display:none}
