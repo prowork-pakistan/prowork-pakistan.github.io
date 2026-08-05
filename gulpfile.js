@@ -14,7 +14,8 @@ const uglifycss = require("gulp-uglifycss");
 const path = {
   src: {
     html: "src/*.html",
-    others: "src/*.+(php|ico|png)",
+    others: "src/*.+(php|ico|png|xml|txt|webmanifest)",
+    root: "src/CNAME",
     htminc: "src/partials/**/*.htm",
     incdir: "src/partials/",
     vendor: "src/vendor/**/*.*",
@@ -141,6 +142,9 @@ const others = () =>
       })
     );
 
+// Copy extensionless root files (CNAME) so the custom domain survives deploys
+const rootFiles = () => src(path.src.root).pipe(dest(path.build.dir));
+
 const videos = () =>
   src(path.src.videos)
     .pipe(dest(path.build.dir + "images/"))
@@ -165,13 +169,13 @@ exports.default = series(
   clean,
   html,
   parallel(scssDev, js),
-  parallel(images, vendor, fonts, others, videos) // Added videos here
+  parallel(images, vendor, fonts, others, rootFiles, videos) // Added videos here
 );
 
 exports.dev = series(
   html,
   parallel(scss, js),
-  parallel(images, vendor, fonts, others, videos), // Added videos here
+  parallel(images, vendor, fonts, others, rootFiles, videos), // Added videos here
   parallel(watchTask, function () {
     bs.init({
       server: {
