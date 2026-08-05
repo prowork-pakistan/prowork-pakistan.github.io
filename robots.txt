@@ -1,0 +1,30 @@
+# ProWork Robots Configuration
+# Allow all search engines to crawl the website
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /blog-post.html
+Allow: /PrivacyPolicy.html
+Allow: /terms.html
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# Sitemap location
+Sitemap: https://prowork.com.pk/sitemap.xml
+
+# Cache timeout
+Cache-Control: public, max-age=2592000
+
+# Comment: Last updated 2026-08-05
