@@ -63,12 +63,5 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- Error Page (typically not indexed) -->
-  <url>
-    <loc>https://prowork.com.pk/error.html</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-  </url>
 
 </urlset>
