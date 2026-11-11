@@ -1,11 +1,103 @@
-@@include('header.htm', {"title": "Contact ProWork | Book a Tour of Our Islamabad Coworking Space", "description": "Get in touch with ProWork in DHA Phase 2, Islamabad. Call, email or send a message to check availability and book a tour of our coworking space.", "canonical": "https://prowork.com.pk/contact.html", "robots": "index, follow, noimageindex"})
+@@include('header.htm', {"title": "Contact ProWork | Book a Tour of Our Islamabad Coworking Space", "description": "Get in touch with ProWork in DHA Phase 2, Islamabad. Call, email or send a message to check availability and book a tour of our coworking space.", "canonical": "https://prowork.com.pk/contact.html", "robots": "index, follow, noimageindex", "navbase": "/"})
 
-@@include('components/navigation-colored.htm')
+<main id="main">
+  <section class="page-hero on-dark" data-hero>
+    <div class="container page-hero__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </nav>
+      <h1 class="page-hero__title">Contact Prowork</h1>
+      <p class="page-hero__lead">Reach out, let’s connect! Whether you have questions, feedback, or simply want to chat about workspace solutions, we’re here to help. Dive into the ProWork experience by getting in touch with us today.</p>
+    </div>
+    <div class="page-hero__arches" aria-hidden="true"><span></span><span></span><span></span></div>
+  </section>
 
-@@include('components/contact-form.htm')
+  <section class="section section--paper">
+    <div class="container contact-grid">
+      <div class="contact-card on-dark">
+        <h2>The fastest way: WhatsApp</h2>
+        <p>Message us to book your free first day, a tour, or to ask about any plan.</p>
+        <div class="btn-row">
+          <a class="btn btn--amber btn--lg" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="contact">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+        <ul class="contact-list" role="list">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+            <div><a href="tel:+923348676891" data-wa-loc="contact">+92 334 8676891</a><small>Give us a call or drop by anytime</small></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+            <div><a href="mailto:touqeerhassan76@gmail.com">touqeerhassan76@gmail.com</a><small>We aim to answer every enquiry within 24 hours on business days</small></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+            <div><address>Plaza No 9, Street A26 Tulip Road, Sector A, DHA Phase 2, Islamabad</address><small>Right next to Giga Mall</small></div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+            <div>Open 7am to 7pm on weekdays<small>Plus plans include 24-hour access</small></div>
+          </li>
+        </ul>
+        <a class="map-card" href="https://maps.google.com/?cid=17869485912110630190" target="_blank" rel="noopener">
+          <img src="/images/visit/map-640.webp" srcset="/images/visit/map-640.webp 640w, /images/visit/map-1200.webp 1200w" sizes="(min-width: 64em) 30rem, 100vw" width="640" height="328" loading="lazy" decoding="async"
+            alt="Map showing Prowork on Street 26A in DHA Phase 2, beside Giga Mall Islamabad" />
+          <span class="map-card__label"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>Get directions on Google Maps</span>
+        </a>
+      </div>
 
-@@include('components/contact.htm')
+      <div class="form-card">
+        <h2 class="section-title">Send us a message</h2>
+        <p>Fill in the form and we’ll get back to you.</p>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-lead-form>
+          <input type="hidden" name="access_key" value="b413d3af-9d47-4c02-8b71-2ca4dd17aa47" />
+          <input type="hidden" name="subject" value="Contact form message from prowork.com.pk" />
+          <input type="hidden" name="from_name" value="Prowork website" />
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-@@include('components/footer.htm')
+          <p class="form-note">Fields marked <span class="field__req" aria-hidden="true">*</span> are required.</p>
 
-@@include('footer.htm')
+          <div class="field">
+            <label for="ct-name">Name <span class="field__req" aria-hidden="true">*</span></label>
+            <input id="ct-name" name="name" type="text" autocomplete="name" required data-label="name" aria-describedby="ct-name-error" />
+            <p class="field__error" id="ct-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="ct-phone">Phone number <span class="field__req" aria-hidden="true">*</span></label>
+            <input id="ct-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required data-label="phone number" aria-describedby="ct-phone-error" />
+            <p class="field__error" id="ct-phone-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="ct-email">Email <span class="field__req" aria-hidden="true">*</span></label>
+            <input id="ct-email" name="email" type="email" autocomplete="email" required data-label="email address" aria-describedby="ct-email-error" />
+            <p class="field__error" id="ct-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="ct-message">Message <span class="field__req" aria-hidden="true">*</span></label>
+            <textarea id="ct-message" name="message" rows="6" required data-label="message" aria-describedby="ct-message-error"></textarea>
+            <p class="field__error" id="ct-message-error" hidden></p>
+          </div>
+
+          <button class="btn btn--amber btn--lg btn--block" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+        </form>
+
+        <div class="form-success" tabindex="-1" hidden data-form-success>
+          <h3>Thanks, your message is on its way.</h3>
+          <p>We’ll get back to you soon. Want a faster reply? Message us on WhatsApp.</p>
+          <a class="btn btn--night" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I%20just%20sent%20a%20message%20on%20your%20website." target="_blank" rel="noopener" data-wa="Hi Prowork! I just sent a message on your website." data-wa-loc="form-success">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+            Message us on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('footer.htm', {"navbase": "/"})

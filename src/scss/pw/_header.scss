@@ -1,0 +1,161 @@
+// Sticky site header and navigation
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--night);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header__bar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  margin-right: auto;
+  padding-block: 0.5rem;
+  border-radius: 4px;
+
+  img {
+    width: 8.75rem;
+    height: auto;
+  }
+}
+
+.site-nav__toggle {
+  display: none;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+
+  .icon--close {
+    display: none;
+  }
+
+  &[aria-expanded="true"] {
+    .icon--menu {
+      display: none;
+    }
+
+    .icon--close {
+      display: block;
+    }
+  }
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0 0 0.75rem;
+  list-style: none;
+  font-size: var(--fs-sm);
+
+  a:not(.btn) {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline: 0.25rem;
+    color: var(--mist-2);
+    text-decoration: none;
+    border-radius: 4px;
+
+    &:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-nav__cta {
+  display: none;
+}
+
+// No-JS: the list simply wraps under the logo. With JS on small screens it becomes a menu.
+@media (max-width: 63.99em) {
+  .site-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .js {
+    .site-nav {
+      order: 0;
+      width: auto;
+    }
+
+    .site-nav__toggle {
+      display: grid;
+    }
+
+    .site-nav__list {
+      position: absolute;
+      top: 100%;
+      left: calc(-1 * var(--gutter));
+      right: calc(-1 * var(--gutter));
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: var(--space-2) var(--gutter) var(--space-6);
+      background: var(--night);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 24px 40px -24px rgba(0, 0, 0, 0.6);
+      font-size: var(--fs-lg);
+
+      &.is-open {
+        display: flex;
+      }
+
+      li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      a:not(.btn) {
+        width: 100%;
+        min-height: 3.25rem;
+      }
+    }
+
+    .site-nav__cta {
+      display: block;
+      padding-top: var(--space-5);
+      border-bottom: 0 !important;
+    }
+  }
+}
+
+@media (min-width: 64em) {
+  .brand img {
+    width: 10.5rem;
+  }
+
+  .site-header__cta-mobile {
+    display: none;
+  }
+
+  .site-nav__list {
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+    padding: 0;
+  }
+
+  .site-nav__cta {
+    display: block;
+    margin-left: 0.5rem;
+  }
+}

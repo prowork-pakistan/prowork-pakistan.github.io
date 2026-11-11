@@ -1,0 +1,439 @@
+// Plans & prices: tabs (Desks / Private rooms / By the day) + 9h/24h access switch.
+// Without JS every panel and both price tiers stay visible, so nothing is hidden from no-JS visitors.
+
+.plans {
+  margin-top: var(--space-7);
+}
+
+.plans__controls {
+  display: none;
+}
+
+.js .plans__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+// Pill segmented controls shared by the tabs and the access switch
+.seg {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+}
+
+.seg__btn,
+.seg label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+
+  &:hover {
+    color: var(--ink);
+    background: var(--paper-2);
+  }
+}
+
+.seg__btn[aria-selected="true"] {
+  background: var(--night);
+  color: var(--white);
+}
+
+.seg input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.seg input:checked + label {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.seg input:focus-visible + label {
+  outline: 3px solid var(--night);
+  outline-offset: 2px;
+}
+
+.plans__tabs {
+  width: 100%;
+
+  .seg__btn {
+    flex: 1 1 auto;
+    padding-inline: 0.7rem;
+  }
+}
+
+.access {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.access__label {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+@media (min-width: 40em) {
+  .plans__tabs {
+    width: auto;
+
+    .seg__btn {
+      padding-inline: 1.25rem;
+    }
+  }
+}
+
+// Panels
+.plans__panel + .plans__panel {
+  margin-top: var(--space-8);
+}
+
+.plans__panel-title {
+  margin-bottom: var(--space-5);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+}
+
+.js {
+  .plans__panel:not(.is-active) {
+    display: none;
+  }
+
+  .plans__panel + .plans__panel {
+    margin-top: 0;
+  }
+
+  .plans__panel-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  // Only the selected access tier shows
+  .plans[data-access="9"] [data-tier="24"],
+  .plans[data-access="24"] [data-tier="9"] {
+    display: none;
+  }
+
+  .plan__tiers {
+    gap: 0;
+  }
+}
+
+.plan-grid {
+  display: grid;
+  gap: var(--space-6) var(--space-5);
+  align-items: stretch;
+}
+
+@media (min-width: 48em) {
+  .plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plan-grid > :nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 64em) {
+  .plan-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .plan-grid > :nth-child(3) {
+    grid-column: auto;
+  }
+}
+
+// Plan card
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem);
+  background: var(--white);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+
+  .btn {
+    margin-top: auto;
+  }
+}
+
+.plan--featured {
+  background: var(--night);
+  border-color: var(--night);
+  color: var(--white);
+  --focus: var(--amber);
+
+  .plan__for,
+  .plan__meta,
+  .price__per,
+  .plan__tier {
+    color: var(--mist);
+  }
+
+  .price {
+    color: var(--amber); // amber as text only on night (7.9:1)
+  }
+
+  .ticks .icon {
+    color: var(--amber);
+  }
+}
+
+.plan__badge {
+  position: absolute;
+  top: -0.85rem;
+  left: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--amber);
+  color: var(--night);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.plan__head {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.plan__name {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.plan__for {
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+}
+
+.plan__tiers {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.plan__tier {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.price {
+  margin-top: 0.3rem;
+  font-size: clamp(2.125rem, 1.8rem + 1.3vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.price__cur {
+  margin-right: 0.15em;
+  font-size: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: 0.55em;
+}
+
+.price__per {
+  font-size: var(--fs-md);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink-2);
+}
+
+.plan__meta {
+  margin-top: 0.5rem;
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .plan__price {
+    animation: price-in 220ms var(--ease-out);
+  }
+}
+
+@keyframes price-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Compact passes (student, night) in a row under the main desk plans
+.plan-row {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.plan--row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-4) var(--space-5);
+  align-items: start;
+
+  .plan__price {
+    text-align: right;
+  }
+
+  .price {
+    font-size: clamp(1.75rem, 1.5rem + 1vw, 2.125rem);
+  }
+
+  .btn {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 48em) {
+  .plan-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+// Photo / promo tiles inside a panel
+.plan-photo {
+  display: grid;
+  gap: var(--space-4);
+  align-content: end;
+  justify-items: center;
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+  text-align: center;
+
+  .arch-frame {
+    width: min(100%, 15rem);
+  }
+
+  p {
+    font-size: var(--fs-sm);
+    color: var(--ink-2);
+  }
+}
+
+.plan-promo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem);
+  border-radius: var(--radius);
+  background: var(--teal);
+  color: var(--white);
+  --focus: var(--amber);
+
+  h4 {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  p {
+    color: var(--on-teal);
+  }
+
+  .btn {
+    margin-top: auto;
+  }
+}
+
+.plan-promo__arch {
+  width: 3rem;
+  height: 3.5rem;
+  border-radius: var(--arch);
+  background: var(--amber);
+}
+
+// Referral band
+.referral {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+  margin-top: var(--space-7);
+  padding: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+  border: 1.5px dashed var(--teal);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.referral__icon {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.75rem;
+  padding-top: 0.35rem;
+  border-radius: var(--arch);
+  background: var(--harbour);
+  color: var(--white);
+}
+
+.referral h3 {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.referral p {
+  margin-top: 0.25rem;
+  color: var(--ink-2);
+}
+
+@media (min-width: 48em) {
+  .referral {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.plans__note {
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+  color: var(--ink-2);
+  text-align: center;
+}

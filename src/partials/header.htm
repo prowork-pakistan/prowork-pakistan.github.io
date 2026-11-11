@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>@@title</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="@@description" />
 
   <!--Meta For No Index-->
   <meta name="robots" content="@@robots" />
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" 
-    content="coworking space, coworking space Islamabad, shared workspace, flexible office space, coworking space near me, affordable office Islamabad, coworking community, professional workspace, private office Islamabad, freelancer workspace, startup office Islamabad, DHA coworking space, Rawalpindi office space, ProWork, modern workspace, rent office space" />
-  <!-- Meta Description -->
-  <meta name="description" content="@@description">
-
   <!-- Canonical Tag -->
   <link rel="canonical" href="@@canonical" />
+
+  <meta name="keywords"
+    content="coworking space, coworking space Islamabad, shared workspace, flexible office space, coworking space near me, affordable office Islamabad, coworking community, professional workspace, private office Islamabad, freelancer workspace, startup office Islamabad, DHA coworking space, Rawalpindi office space, ProWork, modern workspace, rent office space" />
+  <meta name="author" content="Touqeer Hassan" />
+  <meta name="theme-color" content="#0A222A" />
 
   <!-- Open Graph Meta Tags (for social media sharing) -->
   <meta property="og:type" content="website" />
@@ -38,15 +40,41 @@
   <meta name="twitter:image:alt" content="ProWork coworking space in DHA Phase 2, Islamabad" />
   <meta name="twitter:url" content="@@canonical" />
 
-    <!-- Critical CSS -->
-  <meta name="author" content="Touqeer Hassan">
-  <link href="css/critical.css" rel="stylesheet" />
-
   <!--Favicon-->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Lets CSS progressively enhance (tabs, menu) without hiding content from no-JS visitors -->
+  <script>document.documentElement.className += ' js';</script>
+
+  <!-- Poppins (brand font): 400 body, 600 subheads, 800 headlines. Loaded without blocking first paint. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" /></noscript>
+
+  <link rel="stylesheet" href="/css/prowork.css" />
+
+  <!-- Analytics stay off on local previews (localhost) so test visits don't reach GA4 or Meta -->
+  <script>
+    window.PW_TRACK = !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  </script>
+
+  <!-- Google tag (gtag.js): both GA4 properties share one library download -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13Z9RT2ZLP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    if (window.PW_TRACK) {
+      gtag('js', new Date());
+      gtag('config', 'G-13Z9RT2ZLP');
+      gtag('config', 'G-NLX2GY2ET8');
+    }
+  </script>
+
   <!-- Meta Pixel Code -->
   <script>
+    if (window.PW_TRACK)
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -55,41 +83,48 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '875240764746269');
-    fbq('track', 'PageView');
-</script>
-<noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=875240764746269&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-<script defer src="https://admagicai-prod.web.app/ChatComponent.bundle.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Check if the chat container exists
-    var chatContainer = document.getElementById('chat-container');
-    // If the chat container doesn't exist, create it
-    if (!chatContainer) {
-      chatContainer = document.createElement('div');
-      chatContainer.id = 'chat-container';
-      document.body.appendChild(chatContainer);
+    if (window.fbq) {
+      fbq('init', '875240764746269');
+      fbq('track', 'PageView');
     }
-    // Initialize the Chat component
-    if (window.ChatComponent) {
-      ChatComponent.init('2uzeoRKuRLBbCMX8IQej','#chat-container');
-    } else {
-      console.error('ChatComponent is not available');
-    }
-  });
-</script>
+  </script>
+  <!-- End Meta Pixel Code -->
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-13Z9RT2ZLP"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-13Z9RT2ZLP'); </script>
 
 <body>
-  <h1 style="display: none;">Affordable Coworking Space in Islamabad - ProWork</h1>
-  <h1 style="display: none;">Coworking space in Islamabad</h1>
-  <h1 style="display: none;">Coworking space</h1>
-  <h1 style="display: none;">Best Coworking space</h1>
-  <h1 style="display: none;">Coworking space in dha 2</h1>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=875240764746269&amp;ev=PageView&amp;noscript=1" /></noscript>
+  @@include('icons.htm')
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header on-dark">
+    <div class="container site-header__bar">
+      <a class="brand" href="/">
+        <img src="/images/brand/logo-light.webp" alt="Prowork home" width="400" height="61" />
+      </a>
+
+      <a class="btn btn--amber btn--sm site-header__cta-mobile" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="header">
+        Free day<span class="visually-hidden"> on WhatsApp</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main">
+        <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-menu-toggle>
+          <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+        <ul class="site-nav__list" id="site-menu" role="list">
+          <li><a href="@@navbase#plans">Plans</a></li>
+          <li><a href="@@navbase#amenities">Amenities</a></li>
+          <li><a href="@@navbase#space">The space</a></li>
+          <li><a href="@@navbase#reviews">Reviews</a></li>
+          <li><a href="@@navbase#faq">FAQ</a></li>
+          <li><a href="@@navbase#visit">Visit</a></li>
+          <li class="site-nav__cta">
+            <a class="btn btn--amber btn--sm" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="nav">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book a free day<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>

@@ -1,0 +1,84 @@
+// ProWork brand tokens (Arch system, Nov 2026)
+// Source: Obsidian "Prowork Brand.md". Keep proportions roughly:
+// Night 50% · Paper 25% · Amber 10% · Teal 10% · Harbour 5%.
+// Amber is for buttons and one highlight per layout. Never amber body text on light backgrounds.
+
+// Metric-matched fallback so text doesn't jump when Poppins arrives.
+@font-face {
+  font-family: "Poppins Fallback";
+  src: local("Arial");
+  ascent-override: 92.33%;
+  descent-override: 30.78%;
+  line-gap-override: 8.79%;
+  size-adjust: 113.73%;
+}
+
+:root {
+  // Brand colours
+  --night: #0a222a;
+  --night-2: #12323c;      // raised surface on night
+  --night-3: #1d4350;      // hover/border on night
+  --paper: #f6f3ec;
+  --paper-2: #ece6d8;      // quiet panel on paper
+  --line: #dcd5c4;         // hairlines on paper
+  --white: #ffffff;
+  --amber: #f3a31e;
+  --amber-hover: #ffb63f;
+  --amber-press: #df8f0c;
+  --teal: #1f5c5a;
+  --teal-dark: #174745;
+  --harbour: #2b5f8a;
+
+  // Text
+  --ink: #0a222a;          // 14.9:1 on paper
+  --ink-2: #4a5b60;        // 6.4:1 on paper, muted text
+  --mist: #a9bcc2;         // 8.4:1 on night, muted text
+  --mist-2: #d3dee1;       // 12.0:1 on night, body on dark
+  --on-teal: #d9ebea;      // 6.2:1 on teal
+  --field-line: #6f7f84;   // 3.8:1 on paper, input borders
+  --danger: #a4261c;       // 6.6:1 on paper
+
+  // Type
+  --font: "Poppins", "Poppins Fallback", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-h2: clamp(1.875rem, 1.25rem + 2.6vw, 3.125rem);
+  --fs-display: clamp(2.5rem, 1.3rem + 5vw, 4.875rem);
+
+  // Space (4pt rhythm)
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --section-y: clamp(4rem, 2.75rem + 5.5vw, 7.5rem);
+  --gutter: clamp(1rem, 0.4rem + 2.8vw, 2rem);
+  --container: 74rem;
+
+  // Shape
+  --radius-sm: 6px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --arch: 9999px 9999px 0 0;   // perfect semicircle top on any portrait box
+
+  // Motion
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur: 240ms;
+
+  // Layout
+  --header-h: 4rem;
+  --focus: var(--night);
+}
+
+@media (min-width: 64em) {
+  :root {
+    --header-h: 4.5rem;
+  }
+}

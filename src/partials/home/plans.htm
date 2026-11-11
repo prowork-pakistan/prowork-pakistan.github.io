@@ -1,0 +1,274 @@
+<!-- Prices: keep in sync with the hasOfferCatalog block in partials/footer.htm -->
+<section class="section section--white" id="plans" aria-labelledby="plans-title">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <p class="eyebrow">Plans and prices</p>
+      <h2 class="section-title" id="plans-title">Pay by the day or by the month.</h2>
+      <p class="section-lead">Every plan comes with fast internet, free parking and the quiet hall. Start small and step up when you grow, without moving buildings. Your first day is free.</p>
+    </div>
+
+    <div class="plans" data-plans data-access="9">
+      <div class="plans__controls">
+        <div class="seg plans__tabs" role="tablist" aria-label="Plan type">
+          <button class="seg__btn" type="button" role="tab" id="tab-desks" aria-controls="panel-desks" aria-selected="true" data-tiered>Desks</button>
+          <button class="seg__btn" type="button" role="tab" id="tab-rooms" aria-controls="panel-rooms" aria-selected="false" tabindex="-1" data-tiered>Private rooms</button>
+          <button class="seg__btn" type="button" role="tab" id="tab-day" aria-controls="panel-day" aria-selected="false" tabindex="-1">By the day</button>
+        </div>
+        <div class="access" role="radiogroup" aria-labelledby="access-label" data-access-control>
+          <span class="access__label" id="access-label">Access</span>
+          <span class="seg">
+            <input type="radio" name="access" id="access-9" value="9" checked />
+            <label for="access-9">9 hours a day</label>
+            <input type="radio" name="access" id="access-24" value="24" />
+            <label for="access-24">24 hours</label>
+          </span>
+        </div>
+      </div>
+      <p class="visually-hidden" aria-live="polite" data-access-status></p>
+
+      <!-- Desks -->
+      <div class="plans__panel is-active" id="panel-desks" data-panel>
+        <h3 class="plans__panel-title">Desks</h3>
+        <div class="plan-grid">
+          <article class="plan" id="plan-shared-desk" aria-labelledby="plan-shared-desk-name">
+            <div class="plan__head">
+              <h4 class="plan__name" id="plan-shared-desk-name">Shared desk</h4>
+              <p class="plan__for">For freelancers and remote workers</p>
+            </div>
+            <div class="plan__tiers">
+              <div class="plan__price" data-tier="9">
+                <p class="plan__tier">9 hours a day</p>
+                <p class="price"><span class="price__cur">Rs</span>18,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">Day or night, about Rs 600 a day</p>
+              </div>
+              <div class="plan__price" data-tier="24">
+                <p class="plan__tier">Plus: 24-hour access</p>
+                <p class="price"><span class="price__cur">Rs</span>21,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">About Rs 700 a day</p>
+              </div>
+            </div>
+            <ul class="ticks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Any open desk in the hall</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fast internet and free parking</li>
+            </ul>
+            <a class="btn btn--night btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20the%20Shared%20desk." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Shared desk" data-plan-24="Shared desk plus" data-price-9="Rs 18,000 a month" data-price-24="Rs 21,000 a month">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Reserve a shared desk<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="plan plan--featured on-dark" id="plan-dedicated-desk" aria-labelledby="plan-dedicated-desk-name">
+            <p class="plan__badge">Recommended</p>
+            <div class="plan__head">
+              <h4 class="plan__name" id="plan-dedicated-desk-name">Dedicated desk</h4>
+              <p class="plan__for">Your own desk, every day</p>
+            </div>
+            <div class="plan__tiers">
+              <div class="plan__price" data-tier="9">
+                <p class="plan__tier">9 hours a day</p>
+                <p class="price"><span class="price__cur">Rs</span>22,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">Day or night, about Rs 733 a day</p>
+              </div>
+              <div class="plan__price" data-tier="24">
+                <p class="plan__tier">Plus: 24-hour access</p>
+                <p class="price"><span class="price__cur">Rs</span>25,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">About Rs 833 a day</p>
+              </div>
+            </div>
+            <ul class="ticks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>The same desk, kept for you</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Leave your charger, notebook and mug</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fast internet and free parking</li>
+            </ul>
+            <a class="btn btn--amber btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20the%20Dedicated%20desk." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Dedicated desk" data-plan-24="Dedicated desk plus" data-price-9="Rs 22,000 a month" data-price-24="Rs 25,000 a month">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Reserve a dedicated desk<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </article>
+
+          <figure class="plan-photo">
+            <div class="arch-frame">
+              <img src="/images/space/desks-400.webp" srcset="/images/space/desks-400.webp 400w, /images/space/desks-800.webp 800w" sizes="15rem" width="400" height="533" loading="lazy" decoding="async"
+                alt="Open desks with ergonomic chairs in the Prowork hall" />
+            </div>
+            <figcaption><p>Sit anywhere in the open hall, or keep the same desk every day.</p></figcaption>
+          </figure>
+        </div>
+
+        <div class="plan-row">
+            <article class="plan plan--row" id="plan-student-pass" aria-labelledby="plan-student-pass-name">
+              <div class="plan__head">
+                <h4 class="plan__name" id="plan-student-pass-name">Student pass</h4>
+                <p class="plan__for">For students and fresh graduates</p>
+              </div>
+              <div class="plan__price">
+                <p class="plan__tier">3 hours a day</p>
+                <p class="price"><span class="price__cur">Rs</span>7,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">About Rs 233 a day</p>
+              </div>
+              <a class="btn btn--outline btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20the%20Student%20pass." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Student pass" data-price="Rs 7,000 a month">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+                Get the student pass<span class="visually-hidden"> on WhatsApp</span>
+              </a>
+            </article>
+
+            <article class="plan plan--row" id="plan-night-access" aria-labelledby="plan-night-access-name">
+              <div class="plan__head">
+                <h4 class="plan__name" id="plan-night-access-name">Night access</h4>
+                <p class="plan__for">For people who work after dark</p>
+              </div>
+              <div class="plan__price">
+                <p class="plan__tier">9 hours a night</p>
+                <p class="price"><span class="price__cur">Rs</span>15,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">About Rs 500 a night</p>
+              </div>
+              <a class="btn btn--outline btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20Night%20access." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Night access plan" data-price="Rs 15,000 a month">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+                Get night access<span class="visually-hidden"> on WhatsApp</span>
+              </a>
+            </article>
+        </div>
+      </div>
+
+      <!-- Private rooms -->
+      <div class="plans__panel" id="panel-rooms" data-panel>
+        <h3 class="plans__panel-title">Private rooms</h3>
+        <div class="plan-grid">
+          <article class="plan" id="plan-private-cabin" aria-labelledby="plan-private-cabin-name">
+            <div class="plan__head">
+              <h4 class="plan__name" id="plan-private-cabin-name">Private cabin</h4>
+              <p class="plan__for">For small teams, up to 6 people</p>
+            </div>
+            <div class="plan__tiers">
+              <div class="plan__price" data-tier="9">
+                <p class="plan__tier">9 hours a day</p>
+                <p class="price"><span class="price__cur">Rs</span>85,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">About Rs 14,167 per person for a team of 6</p>
+              </div>
+              <div class="plan__price" data-tier="24">
+                <p class="plan__tier">Plus: 24-hour access</p>
+                <p class="price"><span class="price__cur">Rs</span>102,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">Rs 17,000 per person for a team of 6</p>
+              </div>
+            </div>
+            <ul class="ticks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Calls and planning behind your own door</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fast internet and free parking</li>
+            </ul>
+            <a class="btn btn--night btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20a%20Private%20cabin." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Private cabin" data-plan-24="Private cabin plus" data-price-9="Rs 85,000 a month" data-price-24="Rs 102,000 a month">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book a cabin visit<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="plan plan--featured on-dark" id="plan-private-office" aria-labelledby="plan-private-office-name">
+            <p class="plan__badge">Popular</p>
+            <div class="plan__head">
+              <h4 class="plan__name" id="plan-private-office-name">Private office</h4>
+              <p class="plan__for">For growing teams, up to 7 people</p>
+            </div>
+            <div class="plan__tiers">
+              <div class="plan__price" data-tier="9">
+                <p class="plan__tier">9 hours a day</p>
+                <p class="price"><span class="price__cur">Rs</span>98,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">Rs 14,000 per person for a team of 7</p>
+              </div>
+              <div class="plan__price" data-tier="24">
+                <p class="plan__tier">Plus: 24-hour access</p>
+                <p class="price"><span class="price__cur">Rs</span>120,000<span class="price__per"> / month</span></p>
+                <p class="plan__meta">About Rs 17,143 per person for a team of 7</p>
+              </div>
+            </div>
+            <ul class="ticks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>A door your team can close</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>No furniture shopping or wiring. Bring laptops and start</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fast internet and free parking</li>
+            </ul>
+            <a class="btn btn--amber btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20a%20Private%20office." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Private office" data-plan-24="Private office plus" data-price-9="Rs 98,000 a month" data-price-24="Rs 120,000 a month">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book an office visit<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </article>
+
+          <figure class="plan-photo">
+            <div class="arch-frame">
+              <img src="/images/space/cabin-400.webp" srcset="/images/space/cabin-400.webp 400w, /images/space/cabin-800.webp 800w" sizes="15rem" width="400" height="533" loading="lazy" decoding="async"
+                alt="A private room at Prowork with partitioned desks, ergonomic chairs and a yellow arched nook" />
+            </div>
+            <figcaption><p>Glass-walled rooms for teams. Come and see them before you decide.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- By the day -->
+      <div class="plans__panel" id="panel-day" data-panel>
+        <h3 class="plans__panel-title">By the day</h3>
+        <div class="plan-grid">
+          <article class="plan plan--featured on-dark" id="plan-day-pass" aria-labelledby="plan-day-pass-name">
+            <p class="plan__badge">First day free</p>
+            <div class="plan__head">
+              <h4 class="plan__name" id="plan-day-pass-name">Day pass</h4>
+              <p class="plan__for">Full-day access to the hall</p>
+            </div>
+            <div class="plan__price">
+              <p class="plan__tier">One day</p>
+              <p class="price"><span class="price__cur">Rs</span>1,200<span class="price__per"> / day</span></p>
+              <p class="plan__meta">Pay only for the days you actually work</p>
+            </div>
+            <ul class="ticks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Any open desk in the hall</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fast internet and free parking</li>
+            </ul>
+            <a class="btn btn--amber btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'm%20interested%20in%20the%20Day%20pass." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Day pass" data-price="Rs 1,200 a day">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book a day<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </article>
+
+          <article class="plan" id="plan-meeting-room" aria-labelledby="plan-meeting-room-name">
+            <div class="plan__head">
+              <h4 class="plan__name" id="plan-meeting-room-name">Meeting room</h4>
+              <p class="plan__for">For client meetings and team days</p>
+            </div>
+            <div class="plan__price">
+              <p class="plan__tier">One day</p>
+              <p class="price"><span class="price__cur">Rs</span>5,000<span class="price__per"> / day</span></p>
+              <p class="plan__meta">Seats up to 6 people</p>
+            </div>
+            <ul class="ticks" role="list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Client coming in? Skip the office rent</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fast internet and free parking</li>
+            </ul>
+            <a class="btn btn--night btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20the%20Meeting%20room." target="_blank" rel="noopener" data-wa data-wa-loc="plans" data-plan="Meeting room" data-price="Rs 5,000 a day">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book the meeting room<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </article>
+
+          <div class="plan-promo on-dark">
+            <span class="plan-promo__arch" aria-hidden="true"></span>
+            <h4>Not sure yet?</h4>
+            <p>Spend a full day with us for free and decide after. Try the internet, the hall and the commute before you pay anything.</p>
+            <a class="btn btn--amber btn--block" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="plans-promo">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book your free day<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="referral">
+      <span class="referral__icon" aria-hidden="true"><svg class="icon"><use href="#i-gift"></use></svg></span>
+      <div>
+        <h3>Bring a friend, you both save 25%</h3>
+        <p>Refer someone to Prowork and you each get 25% off your first month.</p>
+      </div>
+      <a class="btn btn--teal" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20know%20about%20the%20referral%20discount." target="_blank" rel="noopener" data-wa="Hi Prowork! I'd like to know about the referral discount." data-wa-loc="referral">
+        Ask about referrals<span class="visually-hidden"> on WhatsApp</span>
+      </a>
+    </div>
+
+    <p class="plans__note">Buttons open WhatsApp with your plan already typed in. Prices in Pakistani rupees. Daily figures are the monthly price divided by 30.</p>
+  </div>
+</section>

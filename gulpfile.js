@@ -8,7 +8,6 @@ const autoprefixer = require("gulp-autoprefixer");
 const bs = require("browser-sync").create();
 const rimraf = require("rimraf");
 const uglify = require("gulp-uglify");
-const uglifycss = require("gulp-uglifycss");
 
 // Paths
 const path = {
@@ -18,13 +17,9 @@ const path = {
     root: "src/CNAME",
     htminc: "src/partials/**/*.htm",
     incdir: "src/partials/",
-    vendor: "src/vendor/**/*.*",
-    fonts: "src/fonts/**/*.*",
     js: "src/js/*.js",
     scss: "src/scss/**/*.scss",
-    images: "src/images/**/*.+(png|jpg|gif|svg)",
-    blur: "src/images/**/*.jpg",
-    videos: "src/images/**/*.mp4",
+    images: "src/images/**/*.+(png|jpg|gif|svg|webp|ico)",
   },
   build: {
     dir: "dist/",
@@ -83,8 +78,8 @@ const scssDev = () =>
   src(path.src.scss)
     .pipe(customPlumber("Error Running Sass"))
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
-    .pipe(uglifycss({ maxLineLen: 80, uglyComments: true }))
+    // Sass's own minifier: uglifycss stripped the spaces CSS needs inside clamp()
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/maps"))
     .pipe(dest(path.build.dir + "css/"))
@@ -105,28 +100,10 @@ const js = () =>
       })
     );
 
-// Assets Tasks: copy assets(images,vendor,fonts etc) from source to destination
+// Assets Tasks: copy images (incl. WebP) and root files from source to destination
 const images = () =>
   src(path.src.images)
     .pipe(dest(path.build.dir + "images/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
-
-const vendor = () =>
-  src(path.src.vendor)
-    .pipe(dest(path.build.dir + "vendor/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
-
-const fonts = () =>
-  src(path.src.fonts)
-    .pipe(dest(path.build.dir + "fonts/"))
     .pipe(
       bs.reload({
         stream: true,
@@ -145,23 +122,12 @@ const others = () =>
 // Copy extensionless root files (CNAME) so the custom domain survives deploys
 const rootFiles = () => src(path.src.root).pipe(dest(path.build.dir));
 
-const videos = () =>
-  src(path.src.videos)
-    .pipe(dest(path.build.dir + "images/"))
-    .pipe(
-      bs.reload({
-        stream: true,
-      })
-    );
-
 // Watch task
 const watchTask = () => {
   watch([path.src.html, path.src.htminc], series(html));
   watch(path.src.scss, series(scss));
   watch(path.src.js, series(js));
   watch(path.src.images, series(images));
-  watch(path.src.vendor, series(vendor));
-  watch(path.src.fonts, series(fonts));
   watch(path.src.others, series(others));
 };
 
@@ -169,13 +135,13 @@ exports.default = series(
   clean,
   html,
   parallel(scssDev, js),
-  parallel(images, vendor, fonts, others, rootFiles, videos) // Added videos here
+  parallel(images, others, rootFiles)
 );
 
 exports.dev = series(
   html,
   parallel(scss, js),
-  parallel(images, vendor, fonts, others, rootFiles, videos), // Added videos here
+  parallel(images, others, rootFiles),
   parallel(watchTask, function () {
     bs.init({
       server: {
