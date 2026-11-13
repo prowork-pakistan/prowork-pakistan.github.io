@@ -1,25 +1,23 @@
-@@include('header.htm', {"title": "Coworking Space in Islamabad | Shared Office | ProWork", "description": "ProWork is a coworking space in DHA Phase 2, Islamabad offering flexible desks, private offices and meeting rooms for freelancers, startups and remote teams.", "canonical": "https://prowork.com.pk/", "robots": "index, follow, noimageindex"})
+@@include('header.htm', {"title": "Coworking Space in Islamabad | Shared Office | ProWork", "description": "ProWork is a coworking space in DHA Phase 2, Islamabad offering flexible desks, private offices and meeting rooms for freelancers, startups and remote teams.", "canonical": "https://prowork.com.pk/", "robots": "index, follow, noimageindex", "navbase": ""})
 
-@@include('components/navigation.htm')
+<main id="main">
+  @@include('home/hero.htm')
 
-@@include('components/hero-aria.htm')
+  @@include('home/amenities.htm')
 
-@@include('components/gallery.htm')
+  @@include('home/plans.htm')
 
-@@include('components/call-to-action.htm')
+  @@include('home/space.htm')
 
-@@include('components/service.htm')
+  @@include('home/reviews.htm')
 
-@@include('components/blog.htm')
+  @@include('home/how.htm')
 
-@@include('components/testimonial.htm')
+  @@include('home/faq.htm')
 
-@@include('components/pricing.htm')
+  @@include('home/visit.htm')
+</main>
 
-@@include('components/faq.htm')
+@@include('home/faq-schema.htm')
 
-@@include('components/contact.htm')
-
-@@include('components/footer.htm')
-
-@@include('footer.htm')
+@@include('footer.htm', {"navbase": ""})

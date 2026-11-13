@@ -1,9 +1,52 @@
-@@include('header.htm', {"title": "ProWork Blog | Coworking and Remote Work Insights", "description": "Insights on coworking, productivity and remote work from ProWork coworking space in DHA Phase 2, Islamabad.", "canonical": "https://prowork.com.pk/blog-post.html", "robots": "index, follow, noimageindex"})
+@@include('header.htm', {"title": "ProWork Blog | Coworking and Remote Work Insights", "description": "Insights on coworking, productivity and remote work from ProWork coworking space in DHA Phase 2, Islamabad.", "canonical": "https://prowork.com.pk/blog-post.html", "robots": "index, follow, noimageindex", "navbase": "/"})
 
-@@include('components/navigation-colored.htm')
+<main id="main">
+  <article data-post>
+    <header class="page-hero page-hero--post on-dark" data-hero>
+      <div class="container container--narrow page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li aria-current="page" data-post-crumb>Article</li>
+          </ol>
+        </nav>
+        <h1 class="page-hero__title page-hero__title--long" data-post-title>ProWork blog</h1>
+        <p class="post__date"><time data-post-date></time></p>
+      </div>
+    </header>
 
-@@include('components/post.htm')
+    <div class="section section--paper">
+      <div class="container container--narrow">
+        <figure class="post__media" hidden data-post-figure>
+          <img src="/images/blog/post-1-640.webp" sizes="(min-width: 52em) 52rem, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="" data-post-image />
+        </figure>
 
-@@include('components/footer.htm')
+        <div class="post__layout">
+          <div class="prose" data-post-body>
+            <p class="post__fallback">Sorry, we couldn’t find that article. Browse all posts on <a href="/blog.html">the ProWork blog</a>.</p>
+          </div>
 
-@@include('footer.htm')
+          <aside class="cta-band" aria-label="Try ProWork">
+            <div>
+              <h2>Try ProWork free for a day</h2>
+              <p>Coworking in DHA Phase 2, next to Giga Mall. Day passes from Rs 1,200.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--amber btn--lg" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="blog-post">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+                Book your free day<span class="visually-hidden"> on WhatsApp</span>
+              </a>
+            </div>
+          </aside>
+
+          <a class="post__back" href="/blog.html"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>All posts</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+
+<script src="/js/blog.js" defer></script>
+
+@@include('footer.htm', {"navbase": "/"})

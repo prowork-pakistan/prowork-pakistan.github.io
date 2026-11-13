@@ -1,19 +1,90 @@
-@@include('header.htm', {"title": "About ProWork | Coworking Space in DHA Phase 2, Islamabad", "description": "Learn about ProWork, a coworking community in DHA Phase 2, Islamabad built for freelancers, startups and remote teams who need a professional place to work.", "canonical": "https://prowork.com.pk/about.html", "robots": "index, follow, noimageindex"})
+@@include('header.htm', {"title": "About ProWork | Coworking Space in DHA Phase 2, Islamabad", "description": "Learn about ProWork, a coworking community in DHA Phase 2, Islamabad built for freelancers, startups and remote teams who need a professional place to work.", "canonical": "https://prowork.com.pk/about.html", "robots": "index, follow, noimageindex", "navbase": "/"})
 
-@@include('components/navigation-colored.htm')
+<main id="main">
+  <section class="page-hero on-dark" data-hero>
+    <div class="container page-hero__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">About</li>
+        </ol>
+      </nav>
+      <h1 class="page-hero__title">About Prowork</h1>
+      <p class="page-hero__lead">A coworking space in DHA Phase 2, Islamabad, right next to Giga Mall. Desks by the day or the month, and private rooms for teams.</p>
+    </div>
+    <div class="page-hero__arches" aria-hidden="true"><span></span><span></span><span></span></div>
+  </section>
 
-@@include('components/about.htm')
+  <section class="section section--paper">
+    <div class="container about-intro">
+      <div class="about-intro__copy">
+        <div class="section-head">
+          <p class="eyebrow">Our story</p>
+          <h2 class="section-title">Your corner of DHA2.</h2>
+        </div>
+        <div class="prose">
+        <p>Prowork is a coworking space for freelancers, startups, remote teams, agencies and students. You get a desk, fast internet, parking in the building and a quiet hall, without the cost and hassle of setting up an office of your own.</p>
+        <p>Prowork started in Bahria Town Phase 8 as a workspace for IT teams. Today we are in DHA Phase 2, next to Giga Mall, and the space is open to anyone who needs a good place to work, whether that is one day a week or every day.</p>
+        <p>You will notice the arched nooks around the hall. They gave us our look: an arch is a doorway. You arrive, you step in, and you have your own corner of the room.</p>
+        </div>
+      </div>
+      <div class="about-photos">
+        <div class="arch-frame">
+          <img src="/images/space/nook-blue-400.webp" srcset="/images/space/nook-blue-400.webp 400w, /images/space/nook-blue-800.webp 800w" sizes="(min-width: 64em) 9rem, 28vw" width="400" height="600" loading="lazy" decoding="async" alt="Blue arched focus nook with a built-in desk" />
+        </div>
+        <div class="arch-frame">
+          <img src="/images/space/hall-400.webp" srcset="/images/space/hall-400.webp 400w, /images/space/hall-800.webp 800w" sizes="(min-width: 64em) 12rem, 36vw" width="400" height="533" loading="lazy" decoding="async" alt="The open coworking hall with shared tables and sofas" />
+        </div>
+        <div class="arch-frame">
+          <img src="/images/space/nook-teal-400.webp" srcset="/images/space/nook-teal-400.webp 400w, /images/space/nook-teal-800.webp 800w" sizes="(min-width: 64em) 9rem, 28vw" width="400" height="533" loading="lazy" decoding="async" alt="Teal arched nook beside a glass-walled room" />
+        </div>
+      </div>
+    </div>
 
-@@include('components/story.htm')
+    <div class="container">
+      <dl class="facts">
+        <div class="card"><dt>Where</dt><dd>DHA Phase 2, Islamabad, next to Giga Mall</dd></div>
+        <div class="card"><dt>Day pass</dt><dd>Rs 1,200, and your first day is free</dd></div>
+        <div class="card"><dt>Access</dt><dd>9-hour plans, plus 24-hour access on Plus plans</dd></div>
+        <div class="card"><dt>Included</dt><dd>Fast internet, free parking and a quiet hall</dd></div>
+      </dl>
+    </div>
+  </section>
 
-@@include('components/gallery.htm')
+  <section class="section section--white" aria-labelledby="audience-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Who works here</p>
+        <h2 class="section-title" id="audience-title">Built for people who get things done.</h2>
+      </div>
+      <ul class="audience" role="list">
+        <li class="card"><h3>Freelancers</h3><p>Working from home is great until it is not. Your desk is here.</p></li>
+        <li class="card"><h3>Startups</h3><p>Early team, big plans. A proper office without the build-out.</p></li>
+        <li class="card"><h3>Remote teams</h3><p>Your team is spread out. Give it one good place to meet.</p></li>
+        <li class="card"><h3>Agencies</h3><p>Pitch days and deadline nights, covered.</p></li>
+        <li class="card"><h3>Students</h3><p>Exams, thesis, courses. Study somewhere that feels serious.</p></li>
+        <li class="card"><h3>Night workers</h3><p>Some work only happens after dark. Plus plans give you 24-hour access.</p></li>
+      </ul>
+    </div>
+  </section>
 
-@@include('components/quotes.htm')
+  <section class="section section--paper">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Come see it. Your first day is on us.</h2>
+          <p>Message us to book a free day or a quick tour.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn--amber btn--lg" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="about">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+            Book your free day<span class="visually-hidden"> on WhatsApp</span>
+          </a>
+          <a class="btn btn--ghost-light btn--lg" href="/#plans">See plans</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-@@include('components/clients.htm')
-
-@@include('components/team.htm')
-
-@@include('components/footer.htm')
-
-@@include('footer.htm')
+@@include('footer.htm', {"navbase": "/"})

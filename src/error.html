@@ -1,9 +1,18 @@
-@@include('header.htm', {"title": "Page Not Found | ProWork Coworking Space Islamabad", "description": "The page you are looking for could not be found. Explore ProWork coworking space in DHA Phase 2, Islamabad.", "canonical": "https://prowork.com.pk/", "robots": "noindex, follow"})
+@@include('header.htm', {"title": "Page Not Found | ProWork Coworking Space Islamabad", "description": "The page you are looking for could not be found. Explore ProWork coworking space in DHA Phase 2, Islamabad.", "canonical": "https://prowork.com.pk/", "robots": "noindex, follow", "navbase": "/"})
 
-@@include('components/navigation-colored.htm')
+<main id="main">
+  <section class="page-hero on-dark" data-hero>
+    <div class="container page-hero__inner not-found">
+      <p class="eyebrow">404 error</p>
+      <h1 class="page-hero__title">This page has moved or doesn’t exist.</h1>
+      <p class="page-hero__lead">The rest of Prowork is right where you left it. Try one of these instead.</p>
+      <div class="btn-row">
+        <a class="btn btn--amber btn--lg" href="/">Back to the homepage</a>
+        <a class="btn btn--ghost-light btn--lg" href="/#plans">See plans and prices</a>
+      </div>
+    </div>
+    <div class="page-hero__arches" aria-hidden="true"><span></span><span></span><span></span></div>
+  </section>
+</main>
 
-@@include('components/error.htm')
-
-@@include('components/footer.htm')
-
-@@include('footer.htm')
+@@include('footer.htm', {"navbase": "/"})
