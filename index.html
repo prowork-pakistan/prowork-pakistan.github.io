@@ -104,7 +104,6 @@
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M8 5.2v13.6L19 12z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2.8l2.8 5.8l6.4.9l-4.6 4.5l1.1 6.3L12 17.3l-5.7 3l1.1-6.3l-4.6-4.5l6.4-.9z"/></symbol>
   <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1.2" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7H13a3 3 0 0 1 0 6H9.5"/></symbol>
@@ -186,18 +185,25 @@
       </ul>
     </div>
 
-    <div class="hero__visual">
-      <div class="hero__arch hero__arch--left" aria-hidden="true"></div>
-      <div class="hero__arch hero__arch--main">
+    <div class="hero__visual collage">
+      <div class="collage__main">
         <img
-          src="/images/space/hero-arches-600.webp"
-          srcset="/images/space/hero-arches-400.webp 400w, /images/space/hero-arches-600.webp 600w, /images/space/hero-arches-800.webp 800w"
-          sizes="(min-width: 64em) 20rem, 58vw"
-          width="600" height="750"
-          alt="Inside Prowork: glass-walled rooms beside arched teal and blue nooks in the coworking hall"
+          src="/images/space/hall-wide-960.webp"
+          srcset="/images/space/hall-wide-640.webp 640w, /images/space/hall-wide-960.webp 960w, /images/space/hall-wide-1440.webp 1440w"
+          sizes="(min-width: 64em) 30rem, (min-width: 40em) 29rem, 84vw"
+          width="960" height="720"
+          alt="Inside Prowork: glass-walled rooms, arched teal and blue nooks and a lounge in the coworking hall"
           fetchpriority="high" decoding="async" />
       </div>
-      <div class="hero__arch hero__arch--right" aria-hidden="true"></div>
+      <div class="collage__inset">
+        <img
+          src="/images/space/nook-blue-400.webp"
+          srcset="/images/space/nook-blue-400.webp 400w, /images/space/nook-blue-720.webp 720w"
+          sizes="(min-width: 40em) 13rem, 36vw"
+          width="400" height="533"
+          alt="A blue arched focus nook with a built-in desk and bench"
+          decoding="async" />
+      </div>
       <div class="sign">
         <p class="sign__label">Day pass</p>
         <p class="sign__value">Rs 1,200 <span>/ day</span></p>
@@ -350,12 +356,10 @@
             </a>
           </article>
 
-          <figure class="plan-photo">
-            <div class="arch-frame">
-              <img src="/images/space/desks-400.webp" srcset="/images/space/desks-400.webp 400w, /images/space/desks-800.webp 800w" sizes="15rem" width="400" height="533" loading="lazy" decoding="async"
-                alt="Open desks with ergonomic chairs in the Prowork hall" />
-            </div>
-            <figcaption><p>Sit anywhere in the open hall, or keep the same desk every day.</p></figcaption>
+          <figure class="plan-photo plan-photo--desks">
+            <img src="/images/space/desks-960.webp" srcset="/images/space/desks-640.webp 640w, /images/space/desks-960.webp 960w, /images/space/desks-1440.webp 1440w" sizes="(min-width: 64em) 47rem, 92vw" width="960" height="720" loading="lazy" decoding="async"
+              alt="Open desks with ergonomic chairs in the Prowork hall" />
+            <figcaption class="photo-sign photo-sign--note">Sit anywhere in the open hall, or keep the same desk every day.</figcaption>
           </figure>
         </div>
       </div>
@@ -420,12 +424,10 @@
             </a>
           </article>
 
-          <figure class="plan-photo">
-            <div class="arch-frame">
-              <img src="/images/space/cabin-400.webp" srcset="/images/space/cabin-400.webp 400w, /images/space/cabin-800.webp 800w" sizes="15rem" width="400" height="533" loading="lazy" decoding="async"
-                alt="A private room at Prowork with partitioned desks, ergonomic chairs and a yellow arched nook" />
-            </div>
-            <figcaption><p>Glass-walled rooms for teams. Come and see them before you decide.</p></figcaption>
+          <figure class="plan-photo plan-photo--rooms">
+            <img src="/images/space/team-room-960.webp" srcset="/images/space/team-room-640.webp 640w, /images/space/team-room-960.webp 960w, /images/space/team-room-1440.webp 1440w" sizes="(min-width: 64em) 47rem, 92vw" width="960" height="720" loading="lazy" decoding="async"
+              alt="A private room at Prowork with partitioned desks, ergonomic chairs and a yellow arched nook" />
+            <figcaption class="photo-sign photo-sign--note">Glass-walled rooms for teams. Come and see them before you decide.</figcaption>
           </figure>
         </div>
       </div>
@@ -515,69 +517,73 @@
       <a class="btn btn--ghost-light" href="#visit">Plan a visit</a>
     </div>
 
-    <ul class="gallery" role="list">
-      <li class="gallery__item gallery__item--tall">
-        <figure>
-          <div class="arch-frame">
-            <img src="/images/space/nook-blue-400.webp" srcset="/images/space/nook-blue-400.webp 400w, /images/space/nook-blue-800.webp 800w" sizes="(min-width: 75em) 23rem, (min-width: 48em) 31vw, 46vw" width="400" height="600" loading="lazy" decoding="async"
-              alt="Blue arched focus nook with a built-in desk and bench" />
-          </div>
-          <figcaption>Arched focus nooks</figcaption>
-        </figure>
-      </li>
-      <li class="gallery__item">
-        <figure>
-          <div class="arch-frame">
-            <img src="/images/space/hall-400.webp" srcset="/images/space/hall-400.webp 400w, /images/space/hall-800.webp 800w" sizes="(min-width: 75em) 23rem, (min-width: 48em) 31vw, 46vw" width="400" height="533" loading="lazy" decoding="async"
-              alt="The open coworking hall with shared tables, sofas and desks" />
-          </div>
-          <figcaption>The main hall</figcaption>
-        </figure>
-      </li>
-      <li class="gallery__item gallery__item--short">
-        <figure>
-          <div class="arch-frame">
-            <img src="/images/space/lounge-400.webp" srcset="/images/space/lounge-400.webp 400w, /images/space/lounge-800.webp 800w" sizes="(min-width: 75em) 23rem, (min-width: 48em) 31vw, 46vw" width="400" height="533" loading="lazy" decoding="async"
-              alt="Lounge with grey sofas between the desk areas" />
-          </div>
-          <figcaption>Lounge for breaks</figcaption>
-        </figure>
-      </li>
-      <li class="gallery__item">
-        <figure>
-          <div class="arch-frame">
-            <img src="/images/space/desks-400.webp" srcset="/images/space/desks-400.webp 400w, /images/space/desks-800.webp 800w" sizes="(min-width: 75em) 23rem, (min-width: 48em) 31vw, 46vw" width="400" height="533" loading="lazy" decoding="async"
-              alt="Rows of open desks with ergonomic chairs next to glass-walled rooms" />
-          </div>
-          <figcaption>Open desks</figcaption>
-        </figure>
-      </li>
-      <li class="gallery__item gallery__item--tall">
-        <figure>
-          <div class="arch-frame">
-            <img src="/images/space/nook-sage-400.webp" srcset="/images/space/nook-sage-400.webp 400w, /images/space/nook-sage-800.webp 800w" sizes="(min-width: 75em) 23rem, (min-width: 48em) 31vw, 46vw" width="400" height="600" loading="lazy" decoding="async"
-              alt="Sage green arched nook with a ledge desk for quiet work" />
-          </div>
-          <figcaption>Quiet corners</figcaption>
-        </figure>
-      </li>
-      <li class="gallery__item">
-        <figure>
-          <div class="arch-frame">
-            <img src="/images/space/nook-teal-400.webp" srcset="/images/space/nook-teal-400.webp 400w, /images/space/nook-teal-800.webp 800w" sizes="(min-width: 75em) 23rem, (min-width: 48em) 31vw, 46vw" width="400" height="533" loading="lazy" decoding="async"
-              alt="Teal arched nook beside a glass-walled room" />
-          </div>
-          <figcaption>Glass-walled rooms</figcaption>
-        </figure>
-      </li>
-    </ul>
-
-    <div class="tour">
-      <a class="tour__link" href="https://www.youtube.com/watch?v=bXEacO0yIA4" target="_blank" rel="noopener" data-video-id="bXEacO0yIA4" data-video-title="Prowork coworking space video tour">
-        <img src="/images/space/tour-poster-800.webp" srcset="/images/space/tour-poster-800.webp 800w, /images/space/tour-poster-1200.webp 1200w" sizes="(min-width: 75em) 74rem, 100vw" width="800" height="450" loading="lazy" decoding="async" alt="" />
-        <span class="tour__play" aria-hidden="true"><svg class="icon"><use href="#i-play"></use></svg></span>
-        <span class="tour__label">Watch the video tour <small>Plays here, from YouTube</small></span>
-      </a>
+    <div class="gallery-wrap">
+      <ul class="gallery" role="list">
+        <li class="gallery__item gallery__item--feature">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/open-hall-1440.webp" data-lightbox>
+              <img src="/images/space/open-hall-960.webp" srcset="/images/space/open-hall-640.webp 640w, /images/space/open-hall-960.webp 960w, /images/space/open-hall-1440.webp 1440w" sizes="(min-width: 75em) 39rem, (min-width: 48em) 52vw, 92vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="The open coworking hall with sofas, a long shared table and rows of desks" />
+            </a>
+            <figcaption class="photo-sign">The open hall</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item gallery__item--tall">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/nook-sage-1440.webp" data-lightbox>
+              <img src="/images/space/nook-sage-960.webp" srcset="/images/space/nook-sage-640.webp 640w, /images/space/nook-sage-960.webp 960w, /images/space/nook-sage-1440.webp 1440w" sizes="(min-width: 75em) 39rem, (min-width: 48em) 52vw, 96vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="A sage green arched nook with a ledge desk for quiet work" />
+            </a>
+            <figcaption class="photo-sign">Focus nooks</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/desks-1440.webp" data-lightbox>
+              <img src="/images/space/desks-640.webp" srcset="/images/space/desks-640.webp 640w, /images/space/desks-960.webp 960w, /images/space/desks-1440.webp 1440w" sizes="(min-width: 75em) 19rem, (min-width: 48em) 26vw, 46vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="Rows of desks with ergonomic chairs beside glass-walled rooms" />
+            </a>
+            <figcaption class="photo-sign">Open desks</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/team-room-1440.webp" data-lightbox>
+              <img src="/images/space/team-room-640.webp" srcset="/images/space/team-room-640.webp 640w, /images/space/team-room-960.webp 960w, /images/space/team-room-1440.webp 1440w" sizes="(min-width: 75em) 19rem, (min-width: 48em) 26vw, 46vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="A private room with partitioned desks, ergonomic chairs and a yellow arched nook" />
+            </a>
+            <figcaption class="photo-sign">Private rooms</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/lounge-1440.webp" data-lightbox>
+              <img src="/images/space/lounge-640.webp" srcset="/images/space/lounge-640.webp 640w, /images/space/lounge-960.webp 960w, /images/space/lounge-1440.webp 1440w" sizes="(min-width: 75em) 19rem, (min-width: 48em) 26vw, 46vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="Grey sofas in the lounge, in front of glass-walled rooms and arched nooks" />
+            </a>
+            <figcaption class="photo-sign">The lounge</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item gallery__item--wide">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/glass-rooms-1440.webp" data-lightbox>
+              <img src="/images/space/glass-rooms-960.webp" srcset="/images/space/glass-rooms-640.webp 640w, /images/space/glass-rooms-960.webp 960w, /images/space/glass-rooms-1440.webp 1440w" sizes="(min-width: 75em) 37rem, (min-width: 48em) 50vw, 92vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="A glass-walled room between arched teal and blue nooks" />
+            </a>
+            <figcaption class="photo-sign">Glass-walled rooms</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item">
+          <figure class="photo">
+            <a class="photo__link" href="/images/space/tables-1440.webp" data-lightbox>
+              <img src="/images/space/tables-640.webp" srcset="/images/space/tables-640.webp 640w, /images/space/tables-960.webp 960w, /images/space/tables-1440.webp 1440w" sizes="(min-width: 75em) 19rem, (min-width: 48em) 26vw, 46vw" width="960" height="720" loading="lazy" decoding="async"
+                alt="Long shared tables and benches in the hall, with sofas and desks behind" />
+            </a>
+            <figcaption class="photo-sign">Shared tables</figcaption>
+          </figure>
+        </li>
+      </ul>
+      <p class="gallery__hint">Tap any photo to see it full size.</p>
     </div>
   </div>
 </section>
