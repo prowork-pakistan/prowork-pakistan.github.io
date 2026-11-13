@@ -305,24 +305,43 @@
   }
 }
 
-// Photo / promo tiles inside a panel
+// Photo / promo tiles inside a panel.
+// The photo fills its cell: a 4:3 photo on phones, a wide band on tablets (where it spans the row),
+// and the full height of the plan cards beside it on desktop.
 .plan-photo {
-  display: grid;
-  gap: var(--space-4);
-  align-content: end;
-  justify-items: center;
-  padding: var(--space-5);
-  border-radius: var(--radius);
+  position: relative;
+  min-height: 15rem;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
   background: var(--paper-2);
-  text-align: center;
 
-  .arch-frame {
-    width: min(100%, 15rem);
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+}
 
-  p {
-    font-size: var(--fs-sm);
-    color: var(--ink-2);
+.plan-photo--desks img {
+  object-position: 68% 55%;
+}
+
+.plan-photo--rooms img {
+  object-position: 45% 60%;
+}
+
+@media (min-width: 48em) {
+  .plan-photo {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+@media (min-width: 64em) {
+  .plan-photo {
+    aspect-ratio: auto;
   }
 }
 
