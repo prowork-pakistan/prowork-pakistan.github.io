@@ -3,7 +3,7 @@
  * - Plans: tabs + 9h/24h access switch
  * - WhatsApp links with the chosen plan pre-filled
  * - Call-back / contact forms posted to Web3Forms
- * - Click-to-load YouTube tour
+ * - Full-screen photo viewer for the gallery
  * - Mobile sticky CTA
  * - Conversion events for GA4 and the Meta Pixel
  */
@@ -169,22 +169,99 @@
     openFromHash();
   }
 
-  // ---------- Click-to-load YouTube tour ----------
-  $all("[data-video-id]").forEach(function (link) {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      var id = link.getAttribute("data-video-id");
-      var frame = doc.createElement("iframe");
-      frame.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?autoplay=1&rel=0";
-      frame.title = link.getAttribute("data-video-title") || "Video";
-      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-      frame.setAttribute("allowfullscreen", "");
-      frame.referrerPolicy = "strict-origin-when-cross-origin";
-      link.parentNode.replaceChild(frame, link);
-      frame.focus();
-      track("video_play", { video_id: id });
+  // ---------- Photo viewer for the gallery ----------
+  // Each photo links to its large file, so without JS (or with a modifier click) the photo opens on its own.
+  var photoLinks = $all("a[data-lightbox]");
+  if (photoLinks.length && typeof HTMLDialogElement === "function") {
+    var viewer = null;
+    var viewerImg, viewerText, viewerCount;
+    var current = 0;
+    var opener = null;
+    var touchX = null;
+
+    var captionFor = function (link) {
+      var caption = link.closest("figure") && link.closest("figure").querySelector("figcaption");
+      return caption ? caption.textContent.trim() : "";
+    };
+
+    var showPhoto = function (index) {
+      current = (index + photoLinks.length) % photoLinks.length;
+      var link = photoLinks[current];
+      var thumb = link.querySelector("img");
+      viewerImg.src = link.href;
+      viewerImg.alt = thumb ? thumb.alt : "";
+      viewerText.textContent = captionFor(link);
+      viewerCount.textContent = (current + 1) + " of " + photoLinks.length;
+      new Image().src = photoLinks[(current + 1) % photoLinks.length].href; // ready before the next swipe
+    };
+
+    var buildViewer = function () {
+      viewer = doc.createElement("dialog");
+      viewer.className = "lightbox";
+      viewer.setAttribute("aria-label", "Photos of the space");
+      viewer.innerHTML =
+        '<figure class="lightbox__figure">' +
+          '<img class="lightbox__img" width="1440" height="1080" alt="" />' +
+          '<figcaption class="lightbox__caption" aria-live="polite"><span data-viewer-text></span> <span class="lightbox__count" data-viewer-count></span></figcaption>' +
+        "</figure>" +
+        '<button class="lightbox__btn lightbox__btn--close" type="button" data-viewer-close><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg><span class="visually-hidden">Close photos</span></button>' +
+        '<button class="lightbox__btn lightbox__btn--prev" type="button" data-viewer-prev><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg><span class="visually-hidden">Previous photo</span></button>' +
+        '<button class="lightbox__btn lightbox__btn--next" type="button" data-viewer-next><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg><span class="visually-hidden">Next photo</span></button>';
+      doc.body.appendChild(viewer);
+
+      viewerImg = viewer.querySelector(".lightbox__img");
+      viewerText = viewer.querySelector("[data-viewer-text]");
+      viewerCount = viewer.querySelector("[data-viewer-count]");
+
+      viewer.querySelector("[data-viewer-close]").addEventListener("click", function () { viewer.close(); });
+      viewer.querySelector("[data-viewer-prev]").addEventListener("click", function () { showPhoto(current - 1); });
+      viewer.querySelector("[data-viewer-next]").addEventListener("click", function () { showPhoto(current + 1); });
+
+      // A click on the dark area around the photo closes the viewer
+      viewer.addEventListener("click", function (e) {
+        if (e.target === viewer) viewer.close();
+      });
+
+      viewer.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          showPhoto(current + 1);
+        } else if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          showPhoto(current - 1);
+        }
+      });
+
+      // Swipe left or right on phones
+      viewer.addEventListener("touchstart", function (e) {
+        touchX = e.touches.length === 1 ? e.touches[0].clientX : null;
+      }, { passive: true });
+      viewer.addEventListener("touchend", function (e) {
+        if (touchX === null) return;
+        var dx = e.changedTouches[0].clientX - touchX;
+        touchX = null;
+        if (Math.abs(dx) > 50) showPhoto(current + (dx < 0 ? 1 : -1));
+      });
+
+      viewer.addEventListener("close", function () {
+        doc.documentElement.classList.remove("has-viewer");
+        if (opener) opener.focus();
+      });
+    };
+
+    photoLinks.forEach(function (link, i) {
+      link.addEventListener("click", function (e) {
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();
+        if (!viewer) buildViewer();
+        opener = link;
+        showPhoto(i);
+        viewer.showModal();
+        doc.documentElement.classList.add("has-viewer");
+        track("photo_view", { photo: captionFor(link) });
+      });
     });
-  });
+  }
 
   // ---------- Forms (Web3Forms) ----------
   function fieldMessage(input) {

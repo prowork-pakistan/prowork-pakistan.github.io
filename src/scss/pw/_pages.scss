@@ -183,15 +183,16 @@
   margin-top: var(--space-5);
 }
 
+// Same collage as the home hero, on paper
 .about-photos {
-  display: grid;
-  grid-template-columns: 1fr 1.25fr 1fr;
-  gap: var(--space-3);
-  align-items: end;
+  --mat: var(--paper);
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
 
-  .arch-frame:nth-child(1) { aspect-ratio: 2 / 3.1; }
-  .arch-frame:nth-child(2) { aspect-ratio: 3 / 4.2; }
-  .arch-frame:nth-child(3) { aspect-ratio: 2 / 2.8; }
+  .collage__inset img {
+    object-position: 42% 50%;
+  }
 }
 
 .facts {
@@ -319,7 +320,9 @@
   }
 }
 
+// The photo sits inside the card with square corners, like a mounted print
 .post-card__media {
+  margin: var(--space-3) var(--space-3) 0;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: var(--paper-2);
@@ -414,7 +417,6 @@
 .post__media {
   margin-top: calc(-1 * var(--space-8));
   overflow: hidden;
-  border-radius: var(--radius-lg);
   aspect-ratio: 16 / 10;
   background: var(--paper-2);
 
