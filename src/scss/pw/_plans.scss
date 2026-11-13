@@ -305,39 +305,6 @@
   }
 }
 
-// Compact passes (student, night) in a row under the main desk plans
-.plan-row {
-  display: grid;
-  gap: var(--space-5);
-  margin-top: var(--space-5);
-}
-
-.plan--row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: var(--space-4) var(--space-5);
-  align-items: start;
-
-  .plan__price {
-    text-align: right;
-  }
-
-  .price {
-    font-size: clamp(1.75rem, 1.5rem + 1vw, 2.125rem);
-  }
-
-  .btn {
-    grid-column: 1 / -1;
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 48em) {
-  .plan-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 // Photo / promo tiles inside a panel
 .plan-photo {
   display: grid;
