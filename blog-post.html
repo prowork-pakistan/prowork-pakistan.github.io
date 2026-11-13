@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ProWork Blog | Coworking and Remote Work Insights</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Insights on coworking, productivity and remote work from ProWork coworking space in DHA Phase 2, Islamabad." />
 
   <!--Meta For No Index-->
   <meta name="robots" content="index, follow, noimageindex" />
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" 
-    content="coworking space, coworking space Islamabad, shared workspace, flexible office space, coworking space near me, affordable office Islamabad, coworking community, professional workspace, private office Islamabad, freelancer workspace, startup office Islamabad, DHA coworking space, Rawalpindi office space, ProWork, modern workspace, rent office space" />
-  <!-- Meta Description -->
-  <meta name="description" content="Insights on coworking, productivity and remote work from ProWork coworking space in DHA Phase 2, Islamabad.">
-
   <!-- Canonical Tag -->
   <link rel="canonical" href="https://prowork.com.pk/blog-post.html" />
+
+  <meta name="keywords"
+    content="coworking space, coworking space Islamabad, shared workspace, flexible office space, coworking space near me, affordable office Islamabad, coworking community, professional workspace, private office Islamabad, freelancer workspace, startup office Islamabad, DHA coworking space, Rawalpindi office space, ProWork, modern workspace, rent office space" />
+  <meta name="author" content="Touqeer Hassan" />
+  <meta name="theme-color" content="#0A222A" />
 
   <!-- Open Graph Meta Tags (for social media sharing) -->
   <meta property="og:type" content="website" />
@@ -38,15 +40,41 @@
   <meta name="twitter:image:alt" content="ProWork coworking space in DHA Phase 2, Islamabad" />
   <meta name="twitter:url" content="https://prowork.com.pk/blog-post.html" />
 
-    <!-- Critical CSS -->
-  <meta name="author" content="Touqeer Hassan">
-  <link href="css/critical.css" rel="stylesheet" />
-
   <!--Favicon-->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Lets CSS progressively enhance (tabs, menu) without hiding content from no-JS visitors -->
+  <script>document.documentElement.className += ' js';</script>
+
+  <!-- Poppins (brand font): 400 body, 600 subheads, 800 headlines. Loaded without blocking first paint. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" /></noscript>
+
+  <link rel="stylesheet" href="/css/prowork.css" />
+
+  <!-- Analytics stay off on local previews (localhost) so test visits don't reach GA4 or Meta -->
+  <script>
+    window.PW_TRACK = !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  </script>
+
+  <!-- Google tag (gtag.js): both GA4 properties share one library download -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13Z9RT2ZLP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    if (window.PW_TRACK) {
+      gtag('js', new Date());
+      gtag('config', 'G-13Z9RT2ZLP');
+      gtag('config', 'G-NLX2GY2ET8');
+    }
+  </script>
+
   <!-- Meta Pixel Code -->
   <script>
+    if (window.PW_TRACK)
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -55,347 +83,280 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '875240764746269');
-    fbq('track', 'PageView');
-</script>
-<noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=875240764746269&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-<script defer src="https://admagicai-prod.web.app/ChatComponent.bundle.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Check if the chat container exists
-    var chatContainer = document.getElementById('chat-container');
-    // If the chat container doesn't exist, create it
-    if (!chatContainer) {
-      chatContainer = document.createElement('div');
-      chatContainer.id = 'chat-container';
-      document.body.appendChild(chatContainer);
+    if (window.fbq) {
+      fbq('init', '875240764746269');
+      fbq('track', 'PageView');
     }
-    // Initialize the Chat component
-    if (window.ChatComponent) {
-      ChatComponent.init('2uzeoRKuRLBbCMX8IQej','#chat-container');
-    } else {
-      console.error('ChatComponent is not available');
-    }
-  });
-</script>
+  </script>
+  <!-- End Meta Pixel Code -->
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-13Z9RT2ZLP"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-13Z9RT2ZLP'); </script>
 
 <body>
-  <h1 style="display: none;">Affordable Coworking Space in Islamabad - ProWork</h1>
-  <h1 style="display: none;">Coworking space in Islamabad</h1>
-  <h1 style="display: none;">Coworking space</h1>
-  <h1 style="display: none;">Best Coworking space</h1>
-  <h1 style="display: none;">Coworking space in dha 2</h1>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=875240764746269&amp;ev=PageView&amp;noscript=1" /></noscript>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" fill-rule="evenodd" d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.6 21.4l4.8-1.2A9.5 9.5 0 1 0 12 2.5Zm-2.9 5.1c-.5 0-1 .2-1.3.6-.5.6-.9 1.4-.8 2.4.1 1.5 1 3.1 2.6 4.6 1.6 1.5 3.3 2.4 4.8 2.5 1 .1 1.8-.3 2.4-.8.4-.3.6-.8.6-1.3v-.5c0-.3-.2-.6-.5-.7l-2-.9c-.3-.1-.6 0-.8.2l-.7.8c-.2.2-.5.3-.8.1-1.1-.6-2.1-1.5-2.7-2.6-.2-.3-.1-.6.1-.8l.7-.7c.2-.2.3-.5.2-.8l-.8-2.1c-.1-.3-.4-.5-.7-.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M8 5.2v13.6L19 12z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2.8l2.8 5.8l6.4.9l-4.6 4.5l1.1 6.3L12 17.3l-5.7 3l1.1-6.3l-4.6-4.5l6.4-.9z"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.6a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1.2" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9.5 17V7H13a3 3 0 0 1 0 6H9.5"/></symbol>
+  <symbol id="i-quiet" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m16 9.5 5 5M21 9.5l-5 5"/></symbol>
+  <symbol id="i-seat" viewBox="0 0 24 24"><path d="M6 11V8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v3"/><path d="M4 13a2 2 0 0 1 4 0v2h8v-2a2 2 0 0 1 4 0v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M7 19v2M17 19v2"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14a6.5 6.5 0 0 1 3.5 6"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6 21V4h12v17M3 21h18"/><circle cx="14.5" cy="12.5" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14.5 8.5H17V5h-2.5A4.5 4.5 0 0 0 10 9.5V12H7.5v3.5H10V21h3.5v-5.5H16l.6-3.5h-3.1V9.5a1 1 0 0 1 1-1z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></symbol>
+</svg>
 
-<!-- Navbar Start -->
-<nav class="main-nav main-nav-colored navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <!-- Logo -->
-    <a class="navbar-brand" href="index.html">
-      <img class="logo-main" src="images/logo.png" alt="prowork-logo">
-      <img class="logo-white" src="images/logo-white.png" alt="prowork-logo">
-    </a>
-    <!-- Toogle Button -->
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav" aria-label="navbar-toggler">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <div class="collapse navbar-collapse nav-list" id="mainNav">
-      <!-- Navigation Links -->
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link scroll-to" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link scroll-to" href="index.html#gallery">Exibhitdion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link scroll-to" href="index.html#service">Feature</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link scroll-to" href="about.html">About</a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link scroll-to" href="index.html#pricing">Pricing</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link scroll-to" href="contact.html">Contact</a>
-        </li> -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header on-dark">
+    <div class="container site-header__bar">
+      <a class="brand" href="/">
+        <img src="/images/brand/logo-light.webp" alt="Prowork home" width="400" height="61" />
+      </a>
+
+      <a class="btn btn--amber btn--sm site-header__cta-mobile" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="header">
+        Free day<span class="visually-hidden"> on WhatsApp</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main">
+        <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-menu-toggle>
+          <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"></use></svg>
+          <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"></use></svg>
+        </button>
+        <ul class="site-nav__list" id="site-menu" role="list">
+          <li><a href="/#plans">Plans</a></li>
+          <li><a href="/#amenities">Amenities</a></li>
+          <li><a href="/#space">The space</a></li>
+          <li><a href="/#reviews">Reviews</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#visit">Visit</a></li>
+          <li class="site-nav__cta">
+            <a class="btn btn--amber btn--sm" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="nav">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+              Book a free day<span class="visually-hidden"> on WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<main id="main">
+  <article data-post>
+    <header class="page-hero page-hero--post on-dark" data-hero>
+      <div class="container container--narrow page-hero__inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li aria-current="page" data-post-crumb>Article</li>
+          </ol>
+        </nav>
+        <h1 class="page-hero__title page-hero__title--long" data-post-title>ProWork blog</h1>
+        <p class="post__date"><time data-post-date></time></p>
+      </div>
+    </header>
+
+    <div class="section section--paper">
+      <div class="container container--narrow">
+        <figure class="post__media" hidden data-post-figure>
+          <img src="/images/blog/post-1-640.webp" sizes="(min-width: 52em) 52rem, 100vw" width="1200" height="750" loading="lazy" decoding="async" alt="" data-post-image />
+        </figure>
+
+        <div class="post__layout">
+          <div class="prose" data-post-body>
+            <p class="post__fallback">Sorry, we couldn’t find that article. Browse all posts on <a href="/blog.html">the ProWork blog</a>.</p>
+          </div>
+
+          <aside class="cta-band" aria-label="Try ProWork">
+            <div>
+              <h2>Try ProWork free for a day</h2>
+              <p>Coworking in DHA Phase 2, next to Giga Mall. Day passes from Rs 1,200.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn--amber btn--lg" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="blog-post">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+                Book your free day<span class="visually-hidden"> on WhatsApp</span>
+              </a>
+            </div>
+          </aside>
+
+          <a class="post__back" href="/blog.html"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg>All posts</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+
+<script src="/js/blog.js" defer></script>
+
+  <footer class="site-footer on-dark" data-sticky-stop>
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <img src="/images/brand/logo-light.webp" alt="Prowork" width="400" height="61" loading="lazy" />
+        <p>Our coworking space in Islamabad offers flexible office spaces, private offices, and affordable options for freelancers and startups, right next to Giga Mall in DHA Phase 2.</p>
+        <ul class="social" role="list">
+          <li><a href="https://www.linkedin.com/company/prowork-pakistan/" target="_blank" rel="noopener" aria-label="Prowork on LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a></li>
+          <li><a href="https://www.instagram.com/prowork_coworking_space/" target="_blank" rel="noopener" aria-label="Prowork on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61552140955006" target="_blank" rel="noopener" aria-label="Prowork on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a></li>
+        </ul>
+      </div>
+
+      <nav aria-label="Footer">
+        <h2 class="footer-title">Explore</h2>
+        <ul class="footer-links" role="list">
+          <li><a href="/#plans">Plans and prices</a></li>
+          <li><a href="/#amenities">Amenities</a></li>
+          <li><a href="/#space">The space</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-title">Visit</h2>
+        <ul class="footer-contact" role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><address>Plaza No 9, Street A26 Tulip Road, Sector A, DHA Phase 2, Islamabad</address></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><span>Open 7am to 7pm on weekdays. 24-hour access on Plus plans.</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Contact</h2>
+        <ul class="footer-contact" role="list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg><a href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="footer">WhatsApp us</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><a href="tel:+923348676891" data-wa-loc="footer">+92 334 8676891</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><a href="mailto:touqeerhassan76@gmail.com">touqeerhassan76@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container site-footer__base">
+      <p>© <span data-year>2026</span> ProWork. All rights reserved.</p>
+      <ul role="list">
+        <li><a href="/PrivacyPolicy.html">Privacy policy</a></li>
+        <li><a href="/terms.html">Terms and conditions</a></li>
       </ul>
     </div>
-  </div>
-</nav>
-<!-- Navbar End -->
 
-<article class="post">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <div class="post-title">
-          <h2 style="color: #F3A31E; font-weight: 600;" id="postHead"></h2>
-        </div>
-        <div class="post-meta">
-          <p style="color: #F5F5F7 !important; font-weight: 400 !important;" id="postDate"></p>
-        </div>
-        <div class="post-image">
-          <img src="" alt="prowork-coworking-space" loading="lazy" id="postImage" style="min-width: 100%;">
-        </div>
-        <div class="post-body">
-          <p style="color: #F5F5F7 !important; font-weight: 400 !important; text-align: justify;" id="postBody">
-          </p>
-        </div>
-      </div>
+    <div class="skyline" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
+  </footer>
+
+  <!-- Phones: a persistent way to book once the hero is out of view -->
+  <div class="sticky-cta" data-sticky-cta>
+    <a class="btn btn--amber" href="https://wa.me/923348676891?text=Hi%20Prowork!%20I'd%20like%20to%20book%20my%20free%20first%20day." target="_blank" rel="noopener" data-wa data-wa-loc="sticky">
+      <svg class="icon" aria-hidden="true"><use href="#i-wa"></use></svg>
+      Book your free day<span class="visually-hidden"> on WhatsApp</span>
+    </a>
+    <a class="btn btn--ghost-light" href="tel:+923348676891" data-wa-loc="sticky" aria-label="Call Prowork">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg>
+    </a>
   </div>
-</article>
 
-<section class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-12">
-        <div class="footer-logo">
-          <img src="images/logo-dark.png" alt="coworking-space-logo" style="width: 200px;">
-        </div>
-        <p class="footer-description">
-          "Welcome to ProWork Pakistan: Where ambition meets innovation.
-          Designed for the modern professional, our workspace offers a
-          blend of comfort, cutting-edge amenities, and a conducive
-          environment that fosters growth and creativity."
-        </p>
-        <div class="footer-text-block">
-          <p>
-            Plaza No 9, Street A26 Tulip Road, Sector A, DHA Phase 2 Islamabad
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12 align-self-end">
-        <div class="footer-icon">
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/company/prowork-pakistan/" aria-label="Linkedin" target="_blank">
-                <i class="ti-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/prowork_coworking_space/" aria-label="Instagram" target="_blank">
-                <i class="ti-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/profile.php?id=61552140955006" aria-label="Facebook" target="_blank">
-                <i class="ti-facebook" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-copyright-text">
-          <p> © <span id="newYear"></span> ProWork All rights reserved. </p>
-          <!-- <ul> -->
-          <!-- <li><a href="PrivacyPolicy.html"></a></li> -->
-          <!-- <li><a href="terms.html"></a></li> -->
-          <!-- </ul> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <script src="/js/prowork.js" defer></script>
 
-<p style="font-size: 0.8em; color: #FFF; text-align: center; margin-top: 15px;">Our coworking space in Islamabad offers flexible office spaces, private offices, and affordable options for freelancers and startups.</p>
-<!-- Non Critical CSS -->
-<link href="css/non-critical.css" rel="stylesheet" />
-<!-- Google Map -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
-</script>
-<!-- Vendor JS -->
-<script src="vendor/jQuery/jquery.min.js"></script>
-<script src="vendor/bootstrap/bootstrap.min.js"></script>
-<script src="vendor/slick/slick.min.js"></script>
-<script src="vendor/aos/aos.js"></script>
-<script src="vendor/match-height/match-height.js"></script>
-<script src="vendor/magnific-popup/magnific-popup.min.js"></script>
-<script src="vendor/g-map/gmap.js"></script>
-<!-- Main JS -->
-<script src="js/script.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLX2GY2ET8">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NLX2GY2ET8');
-</script>
-<!-- LocalBusiness Schema -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "ProWork",
-    "description": "ProWork offers affordable coworking space in Islamabad with flexible office options for freelancers, startups, and businesses.",
-    "url": "https://prowork.com.pk",
-    "image": "https://prowork.com.pk/images/logo-dark.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "DHA Phase 2",
-      "addressLocality": "Islamabad",
-      "addressRegion": "Federal",
-      "postalCode": "44000",
-      "addressCountry": "PK"
-    },
-    "telephone": "+92-334-8676891",
-    "email": "info@prowork.com.pk",
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61552140955006",
-      "https://www.instagram.com/prowork_coworking_space/",
-      "https://www.linkedin.com/company/prowork-pakistan/"
-    ],
-    "areaServed": "Islamabad",
-    "serviceType": ["Coworking Space", "Private Office", "Shared Workspace", "Meeting Rooms"],
-    "keywords": ["coworking space Islamabad", "shared workspace", "flexible office space", "affordable office Islamabad", "professional workspace"]
-  }
-</script>
-
-<!-- FAQ Schema - Structured Data for FAQ Section -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-1",
-        "name": "Why should I choose your coworking space?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ProWork offers furnished coworking spaces in DHA Phase 2, Islamabad, with modern amenities and high-speed internet, promoting creativity and productivity in a supportive environment."
-        }
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ProWork",
+      "description": "ProWork offers affordable coworking space in Islamabad with flexible office options for freelancers, startups, and businesses.",
+      "url": "https://prowork.com.pk",
+      "image": "https://prowork.com.pk/images/logo-dark.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "DHA Phase 2",
+        "addressLocality": "Islamabad",
+        "addressRegion": "Federal",
+        "postalCode": "44000",
+        "addressCountry": "PK"
       },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-2",
-        "name": "What membership options are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We have flexible membership plans to suit your needs, including daily passes, monthly memberships, and private office options"
-        }
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5216875,
+        "longitude": 73.1543267
       },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-3",
-        "name": "Is parking available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We provide convenient parking options for our members and it's free."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-4",
-        "name": "How can I become a member?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Becoming a member is easy! Visit our contact page to sign up or schedule a tour to see our space in person."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-5",
-        "name": "What makes ProWork the best coworking space in Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ProWork provides modern coworking spaces in Islamabad with flexible options, affordable rates, and a collaborative environment ideal for freelancers, startups, and remote workers."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-6",
-        "name": "Do you offer flexible office space for remote work in Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, ProWork offers flexible office spaces designed for remote workers and digital nomads seeking a professional environment in Islamabad."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-7",
-        "name": "Is there a dedicated desk option at ProWork?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ProWork offers dedicated desk spaces, ideal for freelancers and professionals needing a consistent, personal workspace."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-8",
-        "name": "Are there private office options available at ProWork in Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, ProWork provides private office spaces tailored for startups and small teams, offering privacy within a vibrant coworking community."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-9",
-        "name": "Is ProWork coworking space affordable for startups and freelancers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ProWork offers cost-effective coworking spaces with flexible memberships, making it an affordable choice for startups and freelancers in Islamabad."
-        }
-      },
-      {
-        "@type": "Question",
-        "@id": "https://prowork.com.pk/#faq-10",
-        "name": "Does ProWork offer coworking spaces in DHA Phase 2, Islamabad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, ProWork provides convenient coworking spaces in DHA Phase 2, Islamabad, featuring flexible office solutions, shared workspaces, and amenities tailored for professionals, startups, and remote workers looking for a productive environment."
-        }
-      }
-    ]
-  }
-</script>
-
-<!-- Organization Schema - Enhanced -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ProWork",
-    "url": "https://prowork.com.pk",
-    "logo": "https://prowork.com.pk/images/logo-dark.png",
-    "description": "ProWork is a premier coworking space in Islamabad offering flexible office solutions for freelancers, startups, and professionals.",
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=61552140955006",
-      "https://www.instagram.com/prowork_coworking_space/",
-      "https://www.linkedin.com/company/prowork-pakistan/"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
+      "hasMap": "https://maps.google.com/?cid=17869485912110630190",
       "telephone": "+92-334-8676891",
-      "email": "info@prowork.com.pk"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "DHA Phase 2",
-      "addressLocality": "Islamabad",
-      "addressRegion": "Federal",
-      "postalCode": "44000",
-      "addressCountry": "PK"
+      "email": "info@prowork.com.pk",
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61552140955006",
+        "https://www.instagram.com/prowork_coworking_space/",
+        "https://www.linkedin.com/company/prowork-pakistan/"
+      ],
+      "areaServed": "Islamabad",
+      "serviceType": ["Coworking Space", "Private Office", "Shared Workspace", "Meeting Rooms"],
+      "keywords": ["coworking space Islamabad", "shared workspace", "flexible office space", "affordable office Islamabad", "professional workspace"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Coworking plans",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Day pass", "description": "Full-day access to the coworking hall. First day free.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 1200, "priceCurrency": "PKR", "unitText": "day" } },
+          { "@type": "Offer", "name": "Meeting room", "description": "Meeting room for up to 6 people.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 5000, "priceCurrency": "PKR", "unitText": "day" } },
+          { "@type": "Offer", "name": "Shared desk", "description": "Shared workspace with 9 hours of access a day (day or night).", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 18000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Shared desk plus", "description": "Shared workspace with 24-hour access.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 21000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Dedicated desk", "description": "Dedicated desk with 9 hours of access a day (day or night).", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 22000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Dedicated desk plus", "description": "Dedicated desk with 24-hour access.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 25000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Private cabin", "description": "Private cabin for up to 6 people with 9 hours of access a day.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 85000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Private cabin plus", "description": "Private cabin for up to 6 people with 24-hour access.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 102000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Private office", "description": "Private office for up to 7 people with 9 hours of access a day.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 98000, "priceCurrency": "PKR", "unitText": "month" } },
+          { "@type": "Offer", "name": "Private office plus", "description": "Private office for up to 7 people with 24-hour access.", "priceSpecification": { "@type": "UnitPriceSpecification", "price": 120000, "priceCurrency": "PKR", "unitText": "month" } }
+        ]
+      }
     }
-  }
-</script>
-  
+  </script>
+
+  <!-- Organization Schema - Enhanced -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ProWork",
+      "url": "https://prowork.com.pk",
+      "logo": "https://prowork.com.pk/images/logo-dark.png",
+      "description": "ProWork is a premier coworking space in Islamabad offering flexible office solutions for freelancers, startups, and professionals.",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61552140955006",
+        "https://www.instagram.com/prowork_coworking_space/",
+        "https://www.linkedin.com/company/prowork-pakistan/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "telephone": "+92-334-8676891",
+        "email": "info@prowork.com.pk"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "DHA Phase 2",
+        "addressLocality": "Islamabad",
+        "addressRegion": "Federal",
+        "postalCode": "44000",
+        "addressCountry": "PK"
+      }
+    }
+  </script>
 </body>
 
 </html>
+
